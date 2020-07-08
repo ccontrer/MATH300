@@ -1,0 +1,182 @@
+\chapter{Week 8}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section{Sturm-Liouville Theory}
+
+
+\begin{enumerate}
+
+
+
+\item \textbf{Theorem 4.5.} 
+
+Given the regular Sturm-Liouville problem,
+\begin{align*}
+& (p(x)\phi ' ) ' + [q(x) + \lambda \sigma(x)]\phi = 0, \quad a < x < b,\\
+& \alpha _1 \phi(a) + \beta _1 \phi ' (a) = 0, \\
+& \alpha _2 \phi(b) + \beta _2 \phi ' (b) = 0,
+\end{align*}
+with eigenvalues $\lambda_{n}$ and corresponding eigenfunctions $\phi_{n}$.
+
+\begin{enumerate}[(a)]
+    \item The regular Sturm-Liouville problem has an infinite spectrum
+    \[S=\{\lambda_{1}, \lambda_{2}, \dots, \lambda_{n}, \dots \}\]
+    and $\lim_{n\to \infty} \lambda _{n}=+\infty$.
+    \item If $\alpha_{1}\beta_{1}\leq 0$ and $\alpha_{2}\beta_{2}\geq 0$, the spectrum is bounded below and the eigenvalues may be ordered as
+    \[\lambda_{1}<\lambda_{2}< \cdots< \lambda_{n}< \cdots.\]
+    Moreover, if $q(x) \leq 0$ for $a \leq x \leq b$, then $\lambda _{n} \geq 0$ for all $n \geq 1$.
+    \item If the eigenvalues are ordered as $\lambda_{1}<\lambda_{2}< \cdots< \lambda_{n}< \cdots$, the eigenfunction corresponding to $\lambda _{n}$ has exactly $(n - 1)$ zeros in the interval $a < x < b$.
+\end{enumerate}
+
+
+% \item \textbf{Definition 4.3.} Let $f$ be piecewise continuous on the interval $[a, b]$. The eigenfunction expansion
+% \[
+% f(x)\sim \sum_{n}^{\infty} c_{n}\phi_{n}(x)
+% \]
+% with coefficients
+% \[
+% c_{n}=\frac{\langle f, \phi_{n}\rangle}{\|\phi_{n}\|^{2}}
+% \]
+% where the inner product has weight function $\sigma(x)$, is called a \textbf{generalized Fourier series of} $f$.
+
+
+\item \textbf{Theorem 4.6.} \textit{(Dirichlet's Theorem)}
+
+If $f$ is piecewise smooth on $[a, b]$, the \textbf{generalized Fourier series},
+\[
+f(x)\sim \sum_{n=1}^{\infty} c_{n}\phi_{n}(x), \quad 
+\text{where}, \quad
+c_{n}=\frac{\langle f, \phi_{n}\rangle}{\|\phi_{n}\|^{2}} = \frac{1}{\|\phi_{n}\|^{2}}\int_{a}^{b} f(x)\phi_{n}(x)\sigma(x)\,dx,
+\]
+for $n \geq 1$, converges pointwise to $[f (x ^{+} ) + f (x ^{-} )]/2$ for each $x \in (a, b)$.
+
+
+
+\newpage
+
+\item \textit{Example 4.6.} Consider the regular Sturm-Liouville problem
+\begin{align*}
+& \phi '' +  \lambda \phi = 0, \quad 0 < x < 1,\\
+& \phi(0) = 0, \\
+& 2 \phi(1) - \phi ' (1) = 0.
+\end{align*}
+
+
+\newpage
+\textit{(continue Example 4.6)}
+
+
+
+\newpage
+
+
+
+\item \textit{Example 4.7.} Consider the regular Sturm-Liouville problem
+\begin{align*}
+& \phi '' +  \lambda^{2} \phi = 0, \quad 0 < x < \pi,\\
+& \phi'(0) = 0, \\
+& \phi(\pi) = 0.
+\end{align*}
+
+\begin{enumerate}[(a)]
+    \item Find the eigenvalues $\lambda^{2}_{n}$ and the corresponding eigenfunctions $\phi_{n}$ for this problem.
+    \item Show directly, by integration, that eigenfunctions corresponding to distinct eigenvalues are orthogonal.
+    \item Given the function $f (x) = \pi^{2} - x^{2} /2, 0 < x < \pi$, find the eigenfunction expansion of $f$.
+    \item Show that
+    \[\frac{\pi^{3}}{32}=1 - \frac{1}{3^{3}} + \frac{1}{5^{3}} - \frac{1}{7^{3}}+ \frac{1}{9^{3}} - + \cdots. \]
+\end{enumerate}
+
+
+
+\newpage
+\textit{(continue Example 4.7)}
+
+\newpage
+
+\item \textbf{Theorem 4.7.} 
+
+If $(\phi _{n} , \lambda _{n})$ is an eigenpair for the regular Sturm-Liouville problem
+\begin{align*}
+& (p(x)\phi ' ) ' + [q(x) + \lambda \sigma(x)]\phi = 0, \quad a < x < b,\\
+& \alpha _1 \phi(a) + \beta _1 \phi ' (a) = 0, \\
+& \alpha _2 \phi(b) + \beta _2 \phi ' (b) = 0,
+\end{align*}
+then $\lambda _{n}$ can be calculated from the \textbf{Rayleigh quotient}:
+\[
+\lambda_{n} = \frac{ \displaystyle -p(x)\phi_{n}(x)\phi'_{n}(x)\Big|_{a}^{b} + \int_{a}^{b}(p(x)\phi'_{n}(x)^{2} - q(x)\phi_{n}(x)^{2}) \, dx }{ \displaystyle \int_{a}^{b}\phi_{n}(x)^{2}\sigma(x)\, dx}.
+\]
+
+
+\item \textbf{Corollary 4.1.} 
+
+If 
+\[-p(x)\phi_{n}(x)\phi'_{n}(x)\Big|_{a}^{b} = - [p(b)\phi_{n}(b)\phi'_{n}(b)-p(a)\phi_{n}(a)\phi'_{n}(a)]\geq 0,\]
+and $q(x) \leq 0$ for $a < x < b$, then $\lambda _{n} > 0$.
+
+
+\item The \textbf{Rayleigh quotient} for \textbf{any} PWS function $u=u(x)$ on $[a,b]$ is given by
+\[
+\mathcal{R}(u) = \frac{ \displaystyle -p(x)u(x)u'(x)\Big|_{a}^{b} + \int_{a}^{b}(p(x)u'(x)^{2} - q(x)u(x)^{2}) \, dx }{ \displaystyle \int_{a}^{b}u(x)^{2}\sigma(x)\, dx}.
+\]
+
+\item \textbf{Theorem 4.8.} 
+
+Given the regular Sturm-Liouville problem
+\begin{align*}
+& (p(x)\phi ' ) ' + [q(x) + \lambda \sigma(x)]\phi = 0, \quad a < x < b,\\
+& \alpha _1 \phi(a) + \beta _1 \phi ' (a) = 0, \\
+& \alpha _2 \phi(b) + \beta _2 \phi ' (b) = 0,
+\end{align*}
+with spectrum
+\[\lambda_{1}<\lambda_{2}<\cdots<\lambda_{n}<\cdots,\]
+Then, the \textbf{leading eigenvalue} is
+\[\lambda_{1}=\min_{u} \mathcal{R}(u)\]
+for all continuous functions $u$ satisftying the boundary conditions
+\[\alpha _1 u(a) + \beta _1 u' (a) = 0, \quad  \alpha _2 u(b) + \beta _2 u ' (b) = 0.\]
+
+
+\newpage
+
+
+
+\item \textit{Example 4.9.} Find good upper and lower bounds for the leading eigenvalue of the regular Sturm-Liouville problem
+\begin{align*}
+& \phi '' - x \phi + \lambda \phi = 0, \quad 0 < x < 1,\\
+& \phi'(0) = 0, \\
+& 2\phi(1) + \phi'(1) = 0.
+\end{align*}
+
+
+
+
+
+\newpage
+\textit{(continue Example 4.9)}
+
+\newpage
+
+
+\item \textit{Example 4.10.} Find the generalized Fourier series solution to the homogeneous Neumann problem for the wave equation. Use the Rayleigh quotient to show that $\lambda _{1} > 0$.
+
+\[
+\begin{aligned}
+    & \alpha(x)\frac{\partial^{2} u}{\partial t ^{2}} = \frac{\partial }{\partial x} \left( \tau(x) \frac{\partial u}{\partial x} \right) - \beta(x)u, \quad 0<x<l , \quad t>0, \\
+    & \frac{\partial u}{\partial x}(0,t)=0, \quad t>0,\\
+    & \frac{\partial }{\partial x}(l,t)=0, \quad t>0, \\
+    & u(x,0)=f(x), \quad 0<x<l,\\
+    & \frac{\partial u}{\partial t}(x,0)=g(x),
+\end{aligned}
+\]
+where $\alpha(x) > 0$, $\tau (x) > 0$, and $\beta(x) > 0$ for $0 < x < l$.
+
+
+\newpage
+\textit{(continue Example 4.10)}
+
+
+\end{enumerate}
+
+
+
+

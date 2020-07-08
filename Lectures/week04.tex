@@ -1,0 +1,107 @@
+\chapter{Week 4}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section[Separation of Variables]{Separation of Variables: Homogeneous equations}
+
+\begin{enumerate}
+
+
+
+\item In the method of \textbf{separations of variables} we look for solutions of the form
+\[u(x,t)=X(x)T(t).\]
+
+
+\item The \textbf{eigenvalue problem with homogeneous Dirichlet boundary conditions}
+\[X''+\lambda X = 0 \, \quad X(0)=0, \quad X(l)=0,\]
+has nontrivial solution for eigenvalues and corresponding eigenfunctions
+\[\lambda_{n} = \left(\frac{n\pi}{l}\right)^{2}, \quad  X_{n}(x)= \sin \frac{n\pi x}{l}, \quad n\geq 1.\]
+
+
+\item The \textbf{eigenvalue problem with homogeneous Neumann boundary conditions}
+\[X''+\lambda X = 0 \, \quad X'(0)=0, \quad X'(l)=0,\]
+has nontrivial solution for eigenvalues and corresponding eigenfunctions
+\[\lambda_{n} = \left(\frac{n\pi}{l}\right)^{2}, \quad  X_{n}(x)= \cos \frac{n\pi x}{l}, \quad n\geq 0.\]
+
+
+\newpage
+
+\item \textbf{Exercise 13.2}
+
+Solve the homogeneous Dirichlet problem for the heat equation
+\[\frac{\partial u}{\partial t} = k \frac{\partial^{2}u}{\partial x^{2}}, \quad 0< x < a, \quad t>0,\]
+subject to the boundary conditions
+\[u(0,t)=0, \quad \text{and} \quad u(a,t)=0,\]
+for $t > 0$, with initial conditions
+\[u(x,0)=
+\begin{cases}
+    1, & 0<x<\frac{a}{2} \\
+    2, & \frac{a}{2} \leq x< a.
+\end{cases}
+\]
+
+
+\newpage
+
+
+\item \textbf{Exercise 13.3}
+
+Solve the following boundary value--initial value problem for the heat equation
+\[\frac{\partial u}{\partial t} = k \frac{\partial^{2}u}{\partial x^{2}},\]
+\[u(0,t)=u(a,t)=0,\]
+\[u(x,0)=3 \sin \frac{\pi x}{a} - \sin \frac{3\pi x}{a}
+\]
+for $0<x<a$, $t > 0$.
+
+
+\newpage
+
+\item \textbf{Exercise 14.2}
+
+Solve the following boundary value--initial value problem for the wave equation:
+
+\[
+\begin{aligned}
+    & \frac{\partial ^{2}u}{\partial t^{2}} =  \frac{\partial^{2}u}{\partial x^{2}}, \quad 0<x<1, \quad t>0 \\
+    & u(0,t)=0, \\
+    & u(1,t)=0, \\
+    & u(x,0)=\sin \pi x + \tfrac{1}{2}\sin 3\pi x + 3 \sin 7 \pi x, \\
+    & \frac{\partial u}{\partial t}(x,0)= 1.
+\end{aligned}
+\]
+
+You can use the fact the $\left\{ \sin\frac{(2n+1)x}{2} \right\}_{n\geq0}$ are orthogonal on $[0,\pi]$.
+
+\newpage 
+
+\textit{(continue Exercise 14.2)}
+
+
+\newpage
+
+\item \textbf{Exercise 13.8}
+
+Solve the problem of heat transfer in a bar of length $a = \pi$ and thermal diffusivity $k = 1$, with initial heat distribution $u(x, 0) = \sin x$, where one end of the bar is kept at a constant temperature $u(0, t) = 0$, while there is no heat loss at the other end of the bar, so that $\partial u(\pi, t)/\partial x = 0$, that
+is, solve the boundary value--initial value problem
+\[
+\begin{aligned}
+    & \frac{\partial u}{\partial t} = k  \frac{\partial^{2}u}{\partial x^{2}}, \quad 0<x<\pi, \quad t>0 \\
+    & u(0,t)=0, \\
+    & \frac{\partial u}{\partial x}u(\pi,t)=0, \\
+    & u(x,0)=\sin x.
+\end{aligned}
+\]
+
+\newpage 
+
+\textit{(continue Exercise 13.8)}
+
+\newpage 
+
+\textit{(continue Exercise 13.8)}
+
+\end{enumerate}
+
+
+
+

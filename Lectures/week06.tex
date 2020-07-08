@@ -1,0 +1,149 @@
+\chapter{Week 6}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section{One-dimensional Wave Equation}
+
+\begin{enumerate}
+
+
+\item Consider the one-dimensional wave equation
+\[\frac{\partial^{2} u}{\partial t^{2}} = c^{2} \frac{\partial^{2} u}{\partial x^{2}}, \quad -\infty<x<\infty, \quad t>0, \quad u(x,0)=f(x), \quad \frac{\partial u}{\partial t}(x,0)=g(x).\]
+\textbf{d'Alembert's solution} is given by
+\[u(x,t)= \frac{1}{2}[f(x+ct)+f(x-ct)] + \frac{1}{2c} \int _{x-ct}^{x+ct} g(\mu)\, d\mu.\]
+
+
+\item \textbf{Exercise 17.12}
+
+The displacement $u = u(x, t)$ of an infinitely long string is governed by the wave equation
+
+\[\frac{\partial^{2} u}{\partial t^{2}} = 4 \frac{\partial^{2} u}{\partial x^{2}}, \quad -\infty<x<\infty, \quad t>0.\]
+
+At time $t = 0$ an initial signal is given of the form
+
+\[
+u(x,0)=f(x)=
+\begin{cases}
+    x , & 0<x<1, \\
+    -x+2, & 1<x<2, \\
+    0, & \text{othewise},
+\end{cases}
+\]
+\[\frac{\partial u}{\partial t}(x,0)=0, \quad -\infty<x<\infty.\]
+\begin{enumerate}
+    \item[a)] Solve this problem.
+    \item[b)] Sketch the solution for times $t _{1}$, $t _{2}$, $t _{3}$, $t _{4}$, $t _{5}$ , with
+    \[t_{1}=0, \quad 0<t_{2}<1/4, \quad t_{3}=1/4, \quad 1/4<t_{4}<1/2, \quad t_{5}=1/2.\]
+    \item[c)] At what time does the signal reach the point $x = 11$?
+\end{enumerate}
+
+\newpage
+
+\textit{(continue Exercise 17.12)}
+
+\newpage
+
+\textit{(continue Exercise 17.12)}
+
+\newpage
+
+\item Consider the one-dimensional wave equation
+\[
+\begin{aligned}
+& \frac{\partial^{2} u}{\partial t^{2}} = c^{2} \frac{\partial^{2} u}{\partial x^{2}}, \quad 0<x<l, \quad t>0, \\
+& u(0,t)=0, \quad  u(l,t)=0, \quad u(x,0)=f(x), \quad \frac{\partial u}{\partial t}(x,0)=g(x).\end{aligned}
+\]
+\textbf{d'Alembert's solution} is given by
+\[u(x,t)= \frac{1}{2}[\bar f_{\text{odd}}(x+ct)+ \bar f_{\text{odd}}(x-ct)] + \frac{1}{2c}\int _{x-ct}^{x+ct} \bar g_{\text{odd}}(\mu)\, d\mu,\]
+where $\bar f_{\text{odd}}$ and $\bar g _{\text{odd}}$ are the $2l$-periodic extension of $f$ and $g$, respectively.
+
+
+\item \textbf{Exercise 14.8}
+
+Use d'Alembert's solution to solve the boundary value--initial value problem for the wave equation:
+\[
+\begin{aligned}
+    & \frac{\partial ^{2}u}{\partial t^{2}} =  \frac{\partial^{2}u}{\partial x^{2}}, \quad 0<x<1, \quad t>0 \\
+    & u(0,t)=0, \\
+    & u(1,t)=0, \\
+    & u(x,0)=0, \\
+    & \frac{\partial u}{\partial t}(x,0) = 1.
+\end{aligned}
+\]
+
+\newpage
+
+\item \textbf{Exercise 17.8}
+
+Consider
+
+\[
+\begin{aligned}
+& \frac{\partial u}{\partial t} + 2u \frac{\partial u}{\partial x} = 0, \quad -\infty<x<\infty, \quad t>0, \\
+& u(x,t)=f(x).
+\end{aligned}
+\]
+Show that characteristics are straight lines.
+
+
+
+\newpage
+
+\item \textbf{Exercise 17.9}
+
+Consider
+
+\[\frac{\partial u}{\partial t} + 2u \frac{\partial u}{\partial x} = 0, \quad -\infty<x<\infty, \quad t>0.\]
+
+with
+
+\[
+u(x,0)=f(x)=
+\begin{cases}
+    1 , & 0<x, \\
+    1+x/a, & 1<x<a, \\
+    2, & x>a.
+\end{cases}
+\]
+
+\begin{enumerate}
+    \item[a)] Determine the equations for the characteristics. Sketch the characteristics.
+    \item[b)] Determine the solution $u(x, t)$. Sketch $u(x, t)$ for t fixed.
+\end{enumerate}
+
+
+\newpage
+
+\item \textbf{Exercise 14.9}
+
+Use d'Alembert's solution to solve the boundary value--initial value problem for the wave equation:
+\[
+\begin{aligned}
+    & \frac{\partial ^{2}u}{\partial t^{2}} =  \frac{\partial^{2}u}{\partial x^{2}}, \quad 0<x<1, \quad t>0 \\
+    & u(0,t)=0, \\
+    & u(1,t)=0, \\
+    & u(x,0)=0, \\
+    & \frac{\partial u}{\partial t}(x,0) = \sin \pi x.
+\end{aligned}
+\]
+
+
+\newpage
+
+\item \textbf{Exercise 14.10}
+
+Use d'Alembert's solution to solve the boundary value--initial value problem for the wave equation:
+\[
+\begin{aligned}
+    & \frac{\partial ^{2}u}{\partial t^{2}} =  25 \frac{\partial^{2}u}{\partial x^{2}}, \quad -\infty<x<\infty, \quad t>0 \\
+    & u(x,0)=x^{2}, \\
+    & \frac{\partial u}{\partial t}(x,0) = 3.
+\end{aligned}
+\]
+
+
+
+\end{enumerate}
+
+\newpage
+

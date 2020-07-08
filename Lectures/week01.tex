@@ -1,0 +1,178 @@
+\chapter{Week 1}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+
+\section{Introduction}
+
+
+\begin{enumerate}
+
+
+\item Notation and definitions:
+
+\begin{itemize}
+
+\item The \textbf{patial derivative} of $f$ with respect to $x$ is denoted
+\[\frac{\partial f}{\partial x} = \frac{\partial}{\partial x}f = f_{x}\]
+
+\item \textbf{Gradient} of $f(x,y,z)$
+\[\nabla f (x,y,z) = (f_{x}(x,y,z),f_{y}(x,y,z),f_{z}(x,y,z)).\]
+
+\item \textbf{Laplacian} of $f(x,y,z)$
+\[\Delta f (x,y,z)= f_{xx}(x,y,z)+f_{yy}(x,y,z)+f_{zz}(x,y,z).\]
+
+\item \textbf{Partial differential equation (PDE)} for unknown $u(x,y)$
+\[F(x,y,u,u_{x},u_{y},u_{xx},u_{xy},u_{yy},u_{xxx},\cdots)=0.\]
+
+\item \textbf{Linear differential operator} $L$ satisfies
+\[L(u+v)=Lu+Lv \quad \text{and} \quad L(\lambda u) = \lambda u.\]
+
+\item \textbf{Linear PDE} for unknown $u$
+\[Lu=f,\]
+where $L$ is a linear differential operator and function $f$ does not depend on $u$ or any of its derivatives. The equation is \textbf{homogeneous} if $f=0$, and \textbf{nonhomogeneous} if $f\neq0$.
+
+\item The \textbf{order of a PDE} is the highest order derivative in the equation.
+\end{itemize}
+
+
+\newpage 
+\item \textit{Example 1.1.}
+
+Find the dimension and order of the following PDEs. Which are linear, and which are homogeneous?
+
+\begin{itemize}
+    \item {Heat equation:} 
+    \[u_{t} = D u_{xx} + f(x)\]
+    \vspace{20pt}
+
+    \item {Wave equation:}
+    \[u_{tt} - c u_{xx} =0 \]
+    \vspace{20pt}
+
+    \item {Laplace equation:}
+    \[u_{xx} + u_{yy} = 0 \]
+    \vspace{20pt}
+
+    \item {Advection equation:}
+    \[ \frac{\partial u}{\partial x}+ \frac{\partial u}{\partial y} = 0\]
+    \vspace{20pt}
+
+    \[ \frac{\partial^{2} u}{\partial x^{2}}+ e^{y}\sin(z)\frac{\partial^{2} u}{\partial x \partial z} = u\]
+    \vspace{40pt}
+
+    \[ \frac{\partial^{2} u}{\partial x \partial y} = \sin(u)\]
+    \vspace{20pt}
+    \item {KdV equation:} \[u_{t} + uu_{xx} + u_{xxx} =1\]
+    \vspace{20pt}
+\end{itemize}
+
+
+\newpage
+
+\item The \textbf{second-order linear constant-coefficiens homogeneous PDEs}
+\[au_{xx}+2bu_{xy}+cu_{yy}+du_{x}+eu_{y}+fu=0\]
+is said to be
+\begin{itemize}
+    \item \textbf{elliptic} iff $ac-b^{2}>0$.
+    \item \textbf{parabolic} iff $ac-b^{2}=0$.
+    \item \textbf{hyperbolic} iff $ac-b^{2}<0$.
+\end{itemize}
+
+\item \textit{Example 1.2.} 
+
+Classify the following second-order linear PDEs.
+\begin{itemize}
+    \item $u _{t} + 2u _{tt} + 3u _{xx} = 0$
+    \vspace{100pt}
+
+    \item $17u_{ yy} + 3u _{x} + u = 0$
+    \vspace{100pt}
+
+    \item $4u _{xy} + 2u _{xx} + u _{yy} = 0$
+    \vspace{100pt}
+
+    \item $u _{yy} - u _{xx} - 2u _{xy} = 0$
+    \vspace{100pt}
+
+\end{itemize}
+
+
+
+\newpage
+
+\item \textbf{Superposition principle}.
+If $u_{1}$ and $u_{2}$ are solutions to $Lu=0$, so is $c_{1}u_{1}+c_{2}u_{2}$.
+
+\item \textbf{Theorem 1.2} If $u_{p}$ is a particular solution to $Lu=f$ and $u_{h}$ is the solutions to $L=u$, then $u=cu_{h}+u_{p}$ is a solution $Lu=f$ for any $c$.
+
+\item \textit{Example 1.7. (Burger’s Equation)}
+
+Consider the following two-dimensional first-order nonlinear PDE:
+\[u_{x}+uu_{y}=0\]
+and solutions
+\[u_{1}(x,y)=1 \quad \text{and} \quad u_{2}(x,y)=\frac{y}{1+x}.\]
+
+
+\vspace{200pt}
+
+Consider the nonhomogeneous case:
+\[u_{x}+uu_{y}=\frac{y^{2}-1}{x^{2}y^{3}}\]
+with particular solution
+\[u_{p}(x,y)=-\frac{1}{xy}.\]
+
+
+
+
+
+\newpage
+
+\item \textbf{Conditions}: a PDE can have
+\begin{itemize}
+    \item \textbf{Initial conditions}: value at time $t=0$, i.e., $u(x,y,0)=u_{0}(x,y)$.
+    \item \textbf{Boundary conditions}: value on the boundary $\partial\Omega$ for all time
+    \begin{itemize}
+        \item Dirichlet: $u=g$ on $\partial\Omega$. Homogeneous if $g=0$.
+        \item Neumann: $\frac{\partial u}{\partial n} =g$ on $\partial\Omega$. Homogeneous if $g=0$.
+        \item Robin: $\alpha u +\beta \frac{\partial u}{\partial n} = g$ on $\partial\Omega$. Homogeneous if $g=0$.
+    \end{itemize}
+
+\end{itemize}
+
+
+\item A \textbf{Boundary Value Problem} BVP is a PDE with boundary conditions.
+
+
+\item A \textbf{steady-state solution} to a BVP does not depend on time, i.e., $u(x,t)=\tilde u (x)$.
+
+\item \textit{Example 1.10.}
+
+Find the steady-state solution to the following PDE on $[0, 2\pi]$ :
+\begin{align*}
+    & u_{ t} = 3u _{xx} + 9 \sin x, \\
+    & u(x, 0) = 9 \sin x, \\
+    & u(0, t) = 9, \\
+    & u _{x} (2\pi, t) = 0.
+\end{align*}
+
+\newpage
+
+\item \textbf{Exercise 15.1}
+
+Show that the function
+\[u = \frac{1}{\sqrt{x^{2}+y^{2}+z^{2}}}\]
+is harmonic; that is, it is a solution to the three-dimensional Laplace equation $\Delta u = 0$.
+
+\newpage
+
+\item \textbf{Exercise 15.4}
+
+Compute the Laplacian of the function
+\[u(x,y)=\log\left( x^{2} +y^{2}\right)\]
+in an appropriate coordinate system and decide if the given function satisfies Laplace's equation $\nabla ^{2} u = 0$.
+
+
+\end{enumerate}
+
+
+

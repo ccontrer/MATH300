@@ -1,0 +1,193 @@
+\chapter{Week 11}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section{Spherical Coordinates}
+
+\begin{enumerate}
+
+
+
+\item Given a point $P$ with Cartesian coordinates $(x,y,z)$, where $ (x,y) \neq (0,0)$, the \textbf{spherical coordinates} of $P$ are $(r, \theta, \phi)$, where
+    \begin{align*}
+        x & = r \cos \phi \sin \theta, \\
+        y & = r \sin \phi \sin \theta, \\
+        z & = r \cos \theta.
+    \end{align*}
+%     The Jacobian determinant of the transformation is
+%     \[\frac{\partial (x,y,z)}{\partial (r,\theta,\phi)} = 
+%     \begin{vmatrix}
+%         \sin \theta \cos \phi & r \cos \theta \cos \phi & - r \sin \theta \sin \phi \\
+%         \sin \theta \sin \phi & r \cos \theta \sin \phi & r \sin \theta \cos \phi \\
+%         \cos \theta &  - r \sin \theta & 0 \\
+%     \end{vmatrix} = r^{2}\sin\theta.
+%     \]
+
+
+\item The \textbf{Laplacian in spherical coordinates} is
+    \[
+    \begin{aligned}\nabla^{2} u & = \frac{1}{r^{2}}\frac{\partial}{\partial r}\left( r^{2} \frac{\partial u}{\partial r} \right) + \frac{1}{r^{2}\sin \theta} \frac{\partial}{\partial \theta}\left( \sin\theta \frac{\partial u}{\partial \theta} \right) + \frac{1}{r^{2}\sin^{2}\theta} \frac{\partial^{2} u}{\partial \phi^{2}} \\
+    & = \frac{\partial^{2} u}{\partial r^{2}} + \frac{2}{r}\frac{\partial u}{\partial r} + \frac{1}{r^{2}}\left( \frac{\partial^{2} u}{\partial \theta^{2}} + \cot \theta \frac{\partial u}{\partial \theta} + \csc^{2}\theta \frac{\partial^{2}u}{\partial \phi^{2}} \right).
+    \end{aligned}
+    \]
+
+
+% \item \textbf{Legendre's equation} is given by
+% \[(1-x^{2})\frac{d^{2}v}{dx^{2}}-2x\frac{dv}{dx}+\lambda  v=0, \quad -1<x<1.\]
+
+\item \textbf{Theorem 7.2} The singular Sturm-Liouville problem given by \textbf{Legendre's equation}
+\[
+\begin{aligned}
+& (1-x^{2})\frac{d^{2}v}{dx^{2}}-2x\frac{dv}{dx}+\lambda  v=0, \quad -1<x<1. \\
+& |v(x)| \text{  and  } |v'(x)| \text{  bounded as  } x\to -1^{+} \text{  and  } x\to 1^{-}
+\end{aligned}
+\]
+has eigenvalues and corresponding eigenfunctions
+\[\lambda_{n}= n(n+1), \quad \phi_{n}(x)=P_{n}(x)=\sum_{k=0}^{\lfloor x \rfloor} \frac{(-1)^{k}(2n-2k)!x^{n-2k}}{2^{n}k!(n-k)!(n-2k)!}, \quad n\geq 0,\]
+where $P_{n}(x)$ are called \textbf{Legendre polynomials}.
+
+\item \textbf{Theorem 7.3.} (Orthogonality of Legendre Polynomials) If $m$ and $n$ are nonnegative integers with $m \neq n$,
+\[\int_{-1}^{1}P_{m}(x)P_{n}(x)\,dx = 0.\]
+
+\newpage
+
+\item \textbf{Exercise 13.19. Heat Flow on a Spherical Shell}
+
+Consider the flow of heat on a thin conducting spherical shell
+\[S = \{ (r,\theta, \phi) \mid r = 1, 0 \leq \theta \leq \pi, −\pi \leq \phi \leq \pi \}. \]
+We want to find the temperature distribution $u(\theta, t)$ on the shell if we are given the initial temperature distribution $u(\theta, 0) = f (\theta)$.
+
+\newpage \textit{(continue Exercise 13.19)}
+
+
+\end{enumerate}
+
+\newpage
+
+\section{Fourier Series}
+
+\begin{enumerate}
+
+
+\item \textbf{Definition 8.2.} If $f$ is piecewise smooth on every finite interval $(a, b)$ and absolutely integrable on $(-\infty, \infty)$, the \textbf{Fourier transform} of $f(x)$, denoted $\widehat{f}$, is
+\[\widehat{f}(\omega) = \mathcal{F} \, [f(x)] \,(\omega) =  \frac{1}{2\pi} \int_{-\infty} ^{\infty}f(x) \,e^{i\omega x} \,dx, \quad -\infty < \omega <\infty.\]
+
+
+\item \textbf{Theorem 8.4.} If $f$ and $f'$ are piecewise continuous on every finite interval $(a, b)$ and $f$ is absolutely integrable on $(-\infty, \infty)$, then
+\[\frac{f(x^{+})+f(x^{-})}{2} = \int_{-\infty}^{\infty}\widehat{f}(\omega)\, e^{-i\omega x}\, d\omega, \quad -\infty <x<\infty.\]
+
+\item \textbf{Definition 8.4.} If $f$ is piecewise smooth on every finite interval $(a, b)$, absolutely integrable on $(-\infty, \infty)$ and $f$ is continuous on $(-\infty, \infty)$, then 
+\[{f}(x) = \mathcal{F}^{-1} \, [f(\omega)] \,(x) =  \int_{-\infty} ^{\infty}\widehat{f}(\omega) \,e^{-i\omega x} \,d\omega, \quad -\infty < x <\infty.\]
+is called the \textbf{inverse Fourier transform} of $\widehat{f} (\omega)$.
+
+\item \textbf{Properties}
+\begin{enumerate}[(i)]
+    \item \textbf{Theorem 8.5.} \textit{(Linearity) }
+    \begin{enumerate}[(a)]
+        \item $\mathcal{F}\,[af+bg] = a\mathcal{F}\,[f] + b \mathcal{F}\,[g]$
+        \item $\mathcal{F}^{-1}\,[af+bg] = a\mathcal{F}^{-1}\,[f] + b \mathcal{F}^{-1}\,[g]$
+    \end{enumerate}
+    \item \textbf{Theorem 8.6.} \textit{(Shift}) 
+    \begin{enumerate}[(a)]
+        \item $\mathcal{F}\,[f(x-a)](\omega) = e^{ia\omega}\widehat{f}(\omega)$
+        \item $\mathcal{F}\,[e^{-iax} f(x-a)](\omega) = \widehat{f}(\omega)$
+        \item $\mathcal{F}\,[f(ax)](\omega) = (1/|a|)\widehat{f}(\omega/a)$
+    \end{enumerate}
+    \item \textbf{Theorem 8.7.} \textit{(Transform of Derivatives) }
+    \[\mathcal{F}\,[f^{(n)}(x)] (\omega) = (-i\omega)^{n}\, \mathcal{F}\,[f(x)](\omega)\]
+    \item \textbf{Theorem 8.8.} \textit{(Transform of an Integral)}
+    \[\mathcal{F}\left[ \int_{0}^{x}f(s)\,ds \right] (\omega) = -\frac{1}{i\omega} \mathcal{F}\, [f(x)](\omega)\]
+\end{enumerate}
+
+
+% \newpage
+% 
+% 
+% \item Proof the linearity, shift, derivative and integral properties.
+
+
+
+\newpage
+
+
+\item \textbf{Definition 8.5.} Let $f : [0, \infty) \to \mathbb{R}$ be continuous and absolutely integrable on $(0, \infty)$, and let $f '$ be piecewise continuous on every finite interval $(a, b) \subset
+(0, \infty)$. Then the sine and cosine transform and inverse transform are given by:
+\begin{enumerate}[(i)]
+    \item The \textbf{Fourier sine transform of} $f (x)$ and the \textbf{inverse sine transform of} $g(\omega)$ are
+    \[\mathcal{S}\,[f(x)](\omega)=\frac{2}{\pi} \int_{0}^{\infty}f(x)\sin\omega x \, dx, \quad \mathcal{S}^{-1}\,[g(\omega)](x)= \int_{0}^{\infty}g(\omega)\sin\omega x \, d\omega,\]
+    \item The \textbf{Fourier cosine transform of} $f (x)$ and the \textbf{inverse cosine transform of} $g(\omega)$ are
+    \[\mathcal{C}\,[f(x)](\omega)=\frac{2}{\pi} \int_{0}^{\infty}f(x)\cos\omega x \, dx, \quad \mathcal{C}^{-1}\,[g(\omega)](x)= \int_{0}^{\infty}g(\omega)\cos\omega x \, d\omega,\]
+\end{enumerate}
+
+
+\item \textbf{Theorem 8.10.} \textit{(Sine and Cosine Transforms of Derivatives)}
+
+If $f$ is piecewise smooth, $f$ and $f ' $ are integrable on $[0, \infty)$, and $\lim _{x\to \infty} f (x) \to 0$, then:
+\begin{enumerate}[(a)]
+    \item For the Fourier sine transform, we have
+    \[\mathcal{S}\,[f'(x)]\,(\omega) = -\omega\, \mathcal{C}\,[f(x)]\,(\omega)\]
+    and if $f ''$ is integrable on $[0, \infty)$ and $\lim _{x\to \infty} f' (x) \to 0$ also, then
+    \[\mathcal{S}\,[f''(x)]\,(\omega) = \frac{2\omega}{\pi}f(0) -\omega^{2} \,\mathcal{S}\,[f(x)]\,(\omega).\]
+    \item For the Fourier cosine transform, we have
+    \[\mathcal{C}\,[f'(x)]\,(\omega) = -\frac{2}{\pi} f(0) + \omega\, \mathcal{S}\,[f(x)]\,(\omega)\]
+    and if $f ''$ is integrable on $[0, \infty)$ and $\lim _{x\to \infty} f' (x) \to 0$ also, then
+    \[\mathcal{C}\,[f''(x)]\,(\omega) = -\frac{2}{\pi}f'(0) -\omega^{2} \,\mathcal{C}\,[f(x)]\,(\omega).\]
+\end{enumerate}
+
+
+
+
+\newpage
+
+
+\item \textbf{Definition 8.6.} (Convolution Product)
+
+If $f$ and $g$ are defined on all of $\mathbb{R}$, and are integrable over $\mathbb{R}$, the \textbf{convolution of} $f$ \textbf{and} $g$, denoted $f*g$, is given by
+\[(f*g)(x) = \int _{-\infty}^{\infty} f(x-t)g(t)\, dt,\quad -\infty <x<\infty.\]
+
+
+
+
+\item \textit{Example 8.6. (Convolution with a Sine)}
+
+Let $f$ be an even integrable function on $\mathbb{R}$, and let $g(x) = \sin ax$ for $x \in \mathbb{R}$, where $a > 0$ is constant; then
+\[ (f * g) (x) = 2\pi\sin (a x) \, \widehat f (a),\]
+where $\hat f$ is the Fourier transform of $f$.
+
+\newpage 
+
+\item \textbf{Theorem 8.11.} \textit{(Convolution Theorem)}
+
+If $f$ and $g$ are integrable and satisfy the hypotheses of Theorem 8.4, then
+\begin{enumerate}[(a)]
+    \item $\displaystyle \mathcal[F]\, \left[ \frac{1}{2\pi} f * g\right] = \widehat{f}\cdot \widehat{g}.$
+    \item If, in addition, $f$ and $g$ are continuous, then $f * g = 2\pi \, \mathcal{F} ^{-1} \left[  \widehat{f} \cdot \widehat{g} \right] $.
+\end{enumerate}
+
+
+\item \textbf{Theorem 8.12.} If the function $f : \mathbb{R} \to \mathbb{R}$ is piecewise smooth on every
+finite interval and is absolutely integrable on $\mathbb{R}$, then the Fourier transform $\widehat{f}(\omega)$ is uniformly continuous on $\mathbb{R}$.
+
+
+\item \textit{Example 8.7.} Find the Fourier transform of the function
+\[ g(x)=
+\begin{cases}
+    \displaystyle 1 - \frac{|x|}{2}, & \text{for } |x|<2,\\
+    0, & \text{for } |x|\geq 2.
+\end{cases}\]
+
+    \newpage 
+    \item \textit{Example 8.8.}
+    Let $f(x)$ be the rectangular pulse
+    \[ f(x)=
+    \begin{cases}
+        1, & \text{for } |x| < 1,\\
+        0, & \text{for } |x| > 1.
+    \end{cases}\]
+    and $f (-1) = f (1) = \frac{1}{2}$. Let $h(x)$ be the convolution of $f$ with itself, that is,
+    \[h(x)=\int_{-\infty}^{\infty} f(x-t) f(t) dt.\]
+    Find the Fourier transform of $h(x)$, and use the convolution theorem to identify $h(x)$.
+
+
+\end{enumerate}
+

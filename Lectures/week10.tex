@@ -1,0 +1,126 @@
+\chapter{Week 10}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+
+\section{Bessel functions}
+
+\begin{enumerate}
+
+    \item \textbf{Bessel's equation} of order $n$ is given by
+    \[x^{2}\frac{d^{2}u}{dx^{2}}+x\frac{du}{dx}+(x^{2}-n^{2})u=0.\]
+
+    \item The general solution of Bessel's equations of order $n$ are given by 
+    \[u(x) = A \,J_{n}(x) + B\,Y_{n}(x),\]
+    for arbitrary constants $A$ and $B$, where
+    \[J_{n}(x) = \sum_{k=0}^{\infty}\frac{(-1)^{k}}{k!\,(n+k)!}\left( \frac{x}{2} \right)^{n+2k},\quad n\geq 0,\]
+    is the \textbf{Bessel function of the first kind of order} $n$ and $Y_{n}(x)$ is the \textbf{Bessel function of the second kind of order} $n$.
+
+%     The \textbf{Bessel function of the second kind of order} $n$ (integer)
+%     \begin{multline*}
+%         Y_{n}(x) = \frac{2}{\pi}\left[ J_{n(x)}\left( \gamma +\log\frac{x}{2} \right) - \frac{1}{2} \sum_{k=0}^{n-1}\frac{(n-k-1)!}{k!}\left( \frac{x}{2} \right)^{2k-n} \right. \\ 
+%         \left. - \frac{1}{2} \sum_{k=1}^{\infty}\frac{(-1)^{n}[\phi(k)+\phi(k+n)]}{k!\,(n+k)!}\left( \frac{x}{2} \right)^{n-2k} \right],\quad n\geq 0,
+%     \end{multline*}
+%     where 
+%     \[\phi(x)=1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{k},\]
+%     and $\gamma$ is the Euler-Mascheroni constant,
+%     \[ \gamma = \lim_{k\to \infty} \left( 1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{k} - \log k \right) = 0.5772157 \dots.\]
+
+%     \item $J _{n} (x)$ is an \textbf{even} function if $n = 0, 2, 4,\dots$, and an \textbf{odd} function if $n = 1, 3, 5,\dots$.
+
+
+
+%     \item $J_{n}(x)$ satisfies the Bessel's equation of order $n$
+%     \[x^{2}\frac{d^{2}u}{dx^{2}}+x\frac{du}{dx}+(x^{2}-n^{2})u=0.\]
+    
+%     \item Asympotics
+%     \begin{itemize}
+%         \item For small values of $x$, that is, as $x \to 0$: $J_{0}(x)\sim 0$, and $\displaystyle J_{n}(x)\sim \frac{1}{2^{n}n!}x^{n}$.
+%         \item For large values of $x$, that is, as $x \to \infty $: $\displaystyle J_{n}(x)\sim \sqrt{\frac{2}{\pi x}}\cos\left(x-\frac{\pi}{4}-\frac{n\pi}{2}\right)$.
+%     \end{itemize}
+    
+%     \item \textbf{Theorem 6.1}. Derivative
+%     \begin{enumerate}[(i)]
+%         \item $\displaystyle \frac{d}{dx}
+%         [x^{n} J _{n} (x)] = x ^{n} J _{n-1} (x)$ for $n \geq 1$, and
+%         \item $\displaystyle \frac{d}{dx}
+%         [x^{-n} J _{n} (x)] = -x ^{-n} J _{n+1} (x)$ for $n \geq 0$.
+%     \end{enumerate}
+
+%     \item \textbf{Theorem 6.3}. Integration
+%     \[J_{n}(x)=\frac{1}{\pi}\int_{0}^{\pi}\cos(n\theta - x \sin\theta)\, d\theta, \quad n\in \mathbb{Z}.\]
+
+%     \item \textbf{Corollary 6.3.} (Bessel series) For $n \geq 0$ we have
+%     \[\sin x = 2\sum_{n=0}^{\infty} (-1)^{n}J_{2n+1}(x), \quad \cos x = J_{0}(x) + 2\sum_{n=1}^{\infty} (-1)^{n}J_{2n}(x).\]
+
+    \item \textbf{Theorem 6.4.} (Orthogonality) For a fixed integer $m \geq 0$,
+    \[\int_{0}^{1} x J_{m}(z_{mn}x)J_{m}(z_{mk}x)\,dx=0, \quad \int_{0}^{1} xJ_{m}(z_{mn}x)^{2}\,dx = \frac{1}{2}J_{m+1}(z_{mn})^{2},\]
+    where $z_{mn}$ is a zero of $J_{m}(x)$ for $n\geq 1$.
+%     That is, the functions $J _{m} (z _{mn} x)$ are orthogonal on the interval $0 \leq x \leq 1$ with respect to the weight function $\sigma(x) = x$.
+
+    \item \textbf{Theorem 6.5.} (Fourier-Bessel Expansion Theorem) If $f$ and $f'$ are piecewise continuous on the interval $0 \leq x \leq 1$, then for $0 < x _{0} < 1$, the \textbf{Fourier-Bessel series} expansion
+    \[f(x) = \sum_{n=1}^{\infty} a_{n}J_{m}(z_{mn}x_{0}), \quad \text{where}\quad a_{n} = \frac{2}{J_{m+1}(z_{mn})^{2}} \int _{0}^{1} f(x) J_{m}(z_{mn}x)x\,dx,\]
+    converges to $[f(x_{0}^{+})+f({x_{0}^{-}})]/2$. At $x _{0} = 1$, the series converges to $0$, since every $J _{m} (z _{mn} ) = 0$. At $x _{0} = 0$, the series converges to 0 if $m \geq 1$, and to $f (0 ^{+} )$ if $m = 0$.
+
+\end{enumerate}
+
+\newpage
+
+\section{Polar coordinates}
+
+\begin{enumerate}
+
+    \item \textit{Vibrating circular membrane}. Consider the following wave equation in a disk
+
+    \[
+    \begin{aligned}
+        & \frac{\partial^{2} u}{\partial t^{2}}  = c\left( \frac{\partial^{2} u}{\partial r^{2}} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^{2}}\frac{\partial^{2} u}{\partial \theta^{2}} \right), \quad 0 < r < a, \quad -\pi < \theta < \pi, \quad t>0, \\
+        & u(r, -\pi, t) = u(r, \pi, t), \\
+        & \frac{\partial u}{\partial \theta}(r, -\pi,t) = \frac{\partial u}{\partial \theta}(r, \pi,t), \\
+        & u(a, \theta, t) = 0, \\
+        & |u(r,\theta ,t)|<\infty, \quad \text{as} \quad r\to 0^{+},\\
+        & u(r,\theta, 0) = f(r,\theta), \\
+        & \frac{\partial u}{\partial t} (r, \theta, 0) = g(r, \theta).
+    \end{aligned}
+    \]
+
+\newpage
+
+\item \textbf{Exercise 13.14.}
+
+Solve the two-dimensional heat equation inside a disk with circularly symmetric time-independent sources, boundary conditions, and initial conditions:
+\[\frac{\partial u}{\partial t} = \frac{k}{r}\frac{\partial}{\partial t}\left( r \frac{\partial u}{\partial r} \right) + Q(r) , \quad 0<r<a, \quad t>0,\]
+with
+\[u(r,0) = f(r), \quad u(a,t)=T.\]
+
+\newpage 
+
+\textit{(continue Exercise 13.14)}
+
+\newpage 
+
+\textit{(continue Exercise 13.14)}
+
+\newpage 
+
+\item \textbf{Exercise 14.18.}
+
+Solve the wave equation for a ``pie-shaped'' membrane of radius a and angle $\pi/3$ (= 60\textdegree) :
+\[\frac{\partial ^{2}u}{\partial t^{2}} = c^{2}\nabla ^{2}u.\]
+Show that the eigenvalues are all positive. Determine the natural frequencies of oscillation if the boundary conditions are
+\[u(r,0,t) = 0, \quad u \left(r, \frac{\pi}{3}, t \right)=0, \quad \frac{\partial u}{\partial r}(a,\theta, t)=0.\]
+
+\newpage 
+
+\textit{(continue Exercise 14.18)}
+
+\newpage 
+
+\textit{(continue Exercise 14.18)}
+
+
+\end{enumerate}
+
+
+
+

@@ -1,0 +1,359 @@
+\chapter{Week 2}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+
+\section{Heat, wave and Laplace's equations}
+
+\begin{enumerate}
+
+
+%     \item \textbf{Separation of variables} is a method to solve for unkown $u(x,t)$ of two-variables
+%     \[u(x,t)=X(x)T(t).\]
+% This is known as \textbf{separation of variables}. After substituting into the PDEs and using the side conditions, the method leads to
+% \begin{itemize}
+%     \item an eigenvalue problem for $X(x)$,
+%     \item an ordinary  differential equation with side conditions for $T(t)$, and
+%     \item one or more Fourier series representation problems.
+% \end{itemize}
+% We know that eigenvalue problems usually have infinitely many solutions, which give infinitely many solutions
+% \[u_{n}(x,t) = X_{n}(x)T_{n}(t).\]
+% Here we use the superposition principle to obtain
+% \[u_{n}(x,t)=\sum_{n}c_{n}u_{n}(x,t)=\sum_{n}c_{n}X(x)T(t).\]
+
+
+
+\item The \textbf{heat equation} is given by
+\[ u_{t} = k \Delta u + F,\]
+where $k$ is the \textbf{thermal diffusivity} and $F$ is the forcing term.
+
+\vspace{80pt}
+
+\item The \textbf{wave equation} is given by
+\[  u_{tt} = c^{2} \Delta u + F,\]
+where $c$ is the \textbf{velocity of wave propagation} and $F$ is the forcing term.
+
+
+\vspace{80pt}
+
+
+\item \textbf{Laplace's equation}, also \textbf{potential equation} is given by
+\[ \Delta u = 0.\]
+
+
+\vspace{80pt}
+
+\textbf{Poisson's equation} is the nonhomogeneous version
+\[ \Delta u = F,\]
+where $F$ is the forcing term and
+
+
+
+\newpage
+
+\item \textbf{Exercise 13.1}
+
+For each of the boundary value problems below, determine whether or not an equilibrium temperature distribution exists and find the values of $\beta$ for which an equilibrium solution exists.
+\begin{enumerate}
+    \item $u_{t}=u_{xx} + 1, \quad u_{x}(0,t)=1, \quad u_{x}(a,t)=\beta.$
+    \vspace{180pt}
+
+    \item $u_{t}=u_{xx}, \quad u_{x}(0,t)=1, \quad u_{x}(a,t)=\beta.$
+    \vspace{180pt}
+
+    \item $u_{t}=u_{xx} + x - \beta , \quad u_{x}(0,t)=0, \quad u_{x}(a,t)=0.$
+\end{enumerate}
+
+
+
+\newpage 
+
+% \item Solve the one-dimensional heat equation with Neumann boundary conditions on the interval $[0,1]$:
+% \begin{align*}
+%     & u_{t} = \tfrac{1}{5} u_{xx}+, 
+%     \quad x\in\Omega =[0,l], \quad t>0,\\
+%     & u_{t}(0,t) = 0, \\
+%     & u_{t}(l,t) = 0, \\
+%     & u(x,0) = f(x)=6 + 4\cos \frac{3\pi x}{l} .
+% \end{align*}
+
+
+\end{enumerate}
+
+
+
+\section{Fourier Series}
+
+\begin{enumerate}
+
+\item \textbf{Definition 2.1}. Let the function $f$ be defined on an open interval containing the
+point $x_0$.
+\begin{itemize}
+\item[(i)] If $f (x^{ +}_{0} ) = f (x ^{-}_{0} ) = f (x _{0} )$, $f$ is \textbf{continuous} at $x _{0}$; and \textbf{discontinuous} at $x _{0}$, otherwise.
+
+\item[(ii)] If $f$ is discontinuous at $x _{0}$ and if both $f (x ^{+}_{0} )$ and $f (x ^{-}_{0} )$ exist, $f$ is said to have a \textbf{discontinuity of the first kind} or a \textbf{simple discontinuity} at $x _{0}$.
+
+\item[(iii)] A simple discontinuity of $f$ of the first kind at $x _{0}$ is said to be
+\begin{itemize}
+
+    \item[(a)] a \textbf{removable discontinuity} if $f (x ^{+}
+_{0} ) = f (x ^{-}_{0} ) \neq f (x _{0} )$ and
+
+    \item[(b)] a \textbf{jump discontinuity} if $f (x ^{+}_{0} ) \neq f (x^{-} _{0} )$, regardless of the value $f (x _{0} )$.
+
+\end{itemize}
+
+\item[(iv)] Any discontinuity of $f$ at $x _{0}$ not of the first kind is said to be a \textbf{discontinuity of the second kind} at $x _{0}$.
+\end{itemize}
+
+\item \textbf{Definition 2.2.} A function $f$ is \textbf{piecewise continuous} (PWC) on an interval $(a, b)$ if
+\begin{itemize}
+\item[(i)] $f$ is continuous for $x \in (a, b)$ except possibly at a finite number of points;
+\item[(ii)] $f (x ^{+} )$ exists for all $x \in [a, b)$;
+\item[(iii)] $f (x ^{-} )$ exists for all $x \in (a, b]$.
+\end{itemize}
+
+Notation. $PWC(a, b)$ denotes the set of all PWC functions on $(a, b)$.
+
+\item \textbf{Theorem 2.1.} [Properies of $PWC(a, b)$]
+\begin{itemize}
+\item[(i)] If $f, g \in PWC(a, b)$, then $\alpha f + \beta g ∈ PWC(a, b)$ for all $\alpha, \beta \in R$.
+\item[(ii)] If $f, g \in PWC(a, b)$, then $f \cdot g \in PWC(a, b)$.
+\item[(iii)] If $f \in PWC(a, b)$, then
+$\int_{a}^{b}|f(x)|dx$ exists.
+\end{itemize}
+
+
+\item \textbf{Definition 2.3.} A function $f$ is \textbf{piecewise smooth} (PWS) on $(a, b)$ if
+\begin{itemize}
+\item[(i)] $f \in PWC(a, b)$ and
+\item[(ii)] $f' \in PWC(a, b)$.
+\end{itemize}
+
+Notation. $PWS(a, b)$ denotes the set of all PWS functions on $(a, b)$.
+
+
+
+\item \textit{Example}. Consider the following functions
+
+\begin{enumerate}
+    \item $
+    f(x) = 
+    \begin{cases}
+        e^{x}, & \text{for } x\neq 1 \\
+        1, & \text{for } x = 1.
+    \end{cases}
+    $
+
+    \vspace{20pt}
+    \item $
+    g(x) = 
+    \begin{cases}
+        \sin(x), & \text{if } x\neq 0 \\
+        0, & \text{if } x = 0.
+    \end{cases}
+    $
+
+    \vspace{20pt}
+    \item $
+    h(x) = 
+    \begin{cases}
+        x, &  0 < x \leq 1 \\
+        -1, &  1 < x \leq 2 \\
+        1, & 2 < x < 3.
+    \end{cases}
+    $
+\end{enumerate}
+
+
+\newpage 
+
+\item \textbf{Definition 2.4.} Let $f$ be a function whose domain $D(f)$ is symmetric, that is, $-x \in D(f )$ whenever $x \in D(f )$; then we say that 
+\begin{itemize}
+\item[(i)] $f$ is \textbf{even} if $f (-x) = f (x) $ for all $x \in D(f )$.
+\item[(ii)] $f$ is \textbf{odd} if $f (-x) = -f (x)$ for all $x \in D(f )$.
+\item[(iii)] $f$ is \textbf{periodic} with period $p$ if $x + p \in D(f )$ whenever $x \in D(f )$, and
+$f (x + p) = f (x)$ for all $x \in D(f )$.
+\end{itemize}
+
+
+\item The \textbf{periodic extension} of $f$ defined on $(a,b)$, denoted $\bar f$, is defined as
+\[\bar f(x)=f(x,np) \quad \text{for} \quad a-np<x<b-np, \quad n \in \mathbb{Z}. \]
+
+
+\item \textbf{Definition 2.5}. If the function $f$ is defined on the interval $(0, l)$:
+
+\begin{itemize}
+\item[(i)] The \textbf{odd extension} of $f$ on $(-l,l)$, denoted $f_{\text{odd}}$, is defined by
+\begin{equation*}
+    f_{\text{odd}}(x)=
+    \begin{cases}
+        f(x), & \text{for} \quad 0<x<l, \\
+        -f(-x), & \text{for} \quad -l<x<0,
+    \end{cases}
+\end{equation*}
+and
+
+\item[(ii)] The \textbf{even extension} of $f$ on $(-l,l)$, denoted $f_{\text{even}}$, is defined by
+\begin{equation*}
+    f_{\text{even}}(x)=
+    \begin{cases}
+        f(x), & \text{for} \quad 0<x<l, \\
+        f(-x), & \text{for} \quad -l<x<0.
+    \end{cases}
+\end{equation*}
+
+\end{itemize}
+
+% \item \textbf{Definition 2.6.} An \textbf{inner product} on a vector space $X$ is any function $\langle u, v\rangle$ that acts on pairs of vectors $u$ and $v$ in $X$ and satisfies the following properties:
+% 
+% For any $u, v, w \in X$ and $\lambda\in R$ :
+% 
+% \begin{itemize}
+% \item[(i)] $\langle u, u\rangle \geq 0$ and $\langle u, u\rangle = 0 $ if and only if $u = 0$,
+% \item[(ii)] $\langle u, v\rangle = \langle v, u\rangle$ ,
+% \item[(iii)] $\langle u, v + w\rangle = \langle u, v\rangle + \langle u, w\rangle$, and
+% \item[(iv)] $\langle \lambda u, v\rangle = \lambda \langle u, v\rangle$.
+% \end{itemize}
+
+\item \textbf{Definition 2.7}. Let $f, g, w \in PWC(a, b)$ with $w(x) \geq 0$. The \textbf{inner product}
+of $f$ and $g$ with \textbf{weight function} $w$ is defined as
+\[\langle f,g \rangle = \int_{a}^{b}f(x)g(x)w(x)dx.\]
+
+
+\item \textbf{Definition 2.8}. The \textbf{norm} of $f \in P W C(a, b)$ with weight $w$ is $\|f\|=\sqrt{\langle f,f \rangle}$.
+
+\item \textbf{Definition 2.9}. If $f, g, w \in P W C(a, b)$ with \textbf{weight function} $w(x) \geq 0$, $f$ and $g$ are said to be \textbf{orthogonal} on $(a, b)$ relative to the weight $w$ if $\langle f, g\rangle =0$.
+% \[\langle f, g\rangle = \int_{a}^{b}f(x)g(x)w(x)dx =  0.\]
+
+
+
+
+\item The set 
+\[\left\{ 1, \cos \frac{\pi x}{l}, \sin\frac{\pi x}{l} , \cos\frac{2\pi x}{l} , \sin\frac{2\pi x}{l} , \cos\frac{3\pi x}{l}, \sin\frac{3\pi x}{l} , \dots \right\} \]
+is an \textbf{orthogonal set of functions} on $(a, b)$ with respect to the inner product above, where $l=(b-a)/2$.
+
+
+
+
+\newpage 
+
+\item \textbf{Exercise 11.3} 
+
+Evaluate
+\[\int_{0}^{a}\cos\frac{n\pi x}{a}\cos\frac{m\pi x}{a}dx\]
+for $n \geq 0 $, $m \geq 0$. Use the trigonometric identity
+\[\cos A \cos B = \frac{1}{2}[\cos(A+B) + \cos(A-B)]\]
+consider $A-B=0$ and $A+B=0$ separately.
+
+\vspace{340pt}
+
+\item \textbf{Exercise 11.4}
+
+Evaluate
+\[\int_{0}^{a}\sin\frac{n\pi x}{a}\sin\frac{m\pi x}{a}dx\]
+for $n \geq 0 $, $m> 0$ and consider $n=m$ separately. Use the trigonometric identity
+\[\sin A \sin B = \frac{1}{2}[\cos(A-B) - \cos(A+B)].\]
+
+
+
+\newpage
+
+\item \textbf{Definition 2.10}.  The \textbf{Fourier series}  of $f$ on $(a, b)$ is given by
+\[f(x) \sim a_{0}+\sum_{n=1}^{\infty}a_{n}\cos \frac{n\pi x}{l} + b_{n}\sin \frac{n\pi x}{l},\]
+where $l=(b-a)/2$ and
+\[a_{0} = \frac{1}{2l}\int_{a}^{b}f(x)dx, \quad a_{n} = \frac{1}{l}\int_{a}^{b}f(x)\cos\frac{n\pi x}{l}dx,\quad b_{n} = \frac{1}{l}\int_{a}^{b}f(x)\sin\frac{n\pi x}{l}dx,\quad n\geq 1,\]
+are called the \textbf{Fourier coefficients} of $f$.
+
+\item \textit{Example 2.8}.
+
+Find the Fourier series for the $2\pi$-periodic function $f$ defined by
+\[f(x)=
+\begin{cases}
+x & 0<x<\pi ,\\
+0 & -\pi<x<0,
+\end{cases}
+\]
+and $f(x+2\pi)=f(x)$ otherwise.
+
+
+
+
+
+\newpage
+
+
+
+\item \textbf{Theorem 2.2}. For $f \in P W C(-l, l)$, the following are true:
+
+\begin{itemize}
+    \item[(a)] If $f$ is an odd function,
+    \[f(x) \sim \sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{l};\]
+that is, the Fourier series for $f$ contains only sine terms.
+    \item[(b)] If $f$ is an even function,
+    \[f(x) \sim a_{0} + \sum_{n=1}^{\infty}a_{n}\cos\frac{n\pi x}{l};\]
+that is, the Fourier series for $f$ contains only cosine terms.
+\end{itemize}
+
+
+
+\item Let function $f$ defined on $(0,l)$.
+\begin{itemize}
+    \item[(i)] The \textbf{Fourier sine series} for $f$ is
+    \[f(x) \sim \sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{l},\]
+    where
+    \[b_{n} = \frac{2}{l}\int_{0}^{l}f(x)\sin\frac{n\pi x}{l}dx \quad \text{for} \quad n \geq 1. \]
+    Note that this defines $f_{\text{even}}$, the  odd extension of $f$ on $(-l,l)$.
+    \item[(ii)] The \textbf{Fourier cosine series} for $f$ is
+    \[f(x) \sim a_{0} + \sum_{n=1}^{\infty}a_{n}\sin\frac{n\pi x}{l},\]
+    where
+    \[a_{0} = \frac{1}{l}\int_{0}^{l}f(x)dx, \quad \text{and} \quad a_{n} = \frac{2}{l}\int_{0}^{l}f(x)\cos\frac{n\pi x}{l}dx\quad \text{for} \quad n \geq 1. \]
+    Note that this defines $f_{\text{even}}$, the even extension of $f$ on $(-l,l)$.
+\end{itemize}
+
+\newpage
+
+\item \textit{Example 2.10a}. Find the Fourier sine series of the function
+\[
+f(x)=
+\begin{cases}
+    2x, & 0<x<1, \\
+    2, & 1<x<2.
+\end{cases}
+\]
+
+
+\newpage
+
+\item \textit{Example 2.10b}. Find the Fourier cosine series of the function
+\[
+f(x)=
+\begin{cases}
+    2x, & 0<x<1, \\
+    2, & 1<x<2.
+\end{cases}
+\]
+
+\newpage
+
+
+
+\item \textbf{Excercise 18.2}
+
+Let $f(x)=\cos^{2}(x), 0 < x < \pi$.
+
+\begin{enumerate}
+\item Find the Fourier sine series for $f$ on the interval $(0,\pi)$.
+
+Hint: For $n\geq 1$,
+\[\int \cos^{2}x\sin nx dx = -\frac{1}{2n}\cos nx + \frac{1}{4}\int [\sin (n+2)x + \sin(n-2)x ]dx.  \]
+\item Find the Fourier cosine series for $f$ on the interval $(0,\pi)$.
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+
+

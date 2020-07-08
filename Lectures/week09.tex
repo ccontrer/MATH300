@@ -1,0 +1,167 @@
+\chapter{Week 9}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section{Sturm-Liouville Theory}
+
+
+\begin{enumerate}
+
+\item \textit{Example 4.11} Summary of standard Sturm-Liouville problems.
+
+\begin{center}\small
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Model Type}} & 
+    \parbox[c][30pt]{90pt}{\centering \textbf{S-L Problem}} & \parbox[t]{90pt}{\centering \textbf{Spectrum}} & 
+    \parbox[c][30pt]{90pt}{\centering \textbf{Eigenfunctions}} \\
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Homogeneous \\ \vspace{10pt} Dirichlet B.C.}} & 
+    \parbox[c][60pt]{90pt}{\centering $\phi''(x) + \lambda \phi(x)=0$ \\ \vspace{10pt} $\phi(0)=\phi(l)=0$}
+    & 
+    \parbox[c][60pt]{90pt}{\centering $\displaystyle \lambda_{n}=\left( \frac{n\pi}{l} \right)^{2}$ \\ \vspace{10pt} $n=1, 2, \cdots$} & 
+    \parbox[c][60pt]{90pt}{\centering $\displaystyle \phi_{n} = \sin\frac{n\pi x}{l}$ \\ \vspace{10pt} $n=1, 2, \cdots$} \\
+    \hline 
+    \parbox[c][30pt]{90pt}{\centering \textbf{Homogeneous \\ \vspace{10pt} Neumann B.C.}} & 
+    \parbox[c][60pt]{90pt}{\centering $\phi''(x) + \lambda \phi(x)=0$ \\ \vspace{10pt} $\phi'(0)=\phi'(l)=0$}
+    & 
+    \parbox[c][60pt]{90pt}{\centering $\displaystyle \lambda_{n}=\left( \frac{n\pi}{l} \right)^{2}$ \\ \vspace{10pt} $n=0, 1, \cdots$} & 
+    \parbox[c][60pt]{90pt}{\centering $\displaystyle \phi_{n} = \cos\frac{n\pi x}{l}$ \\ \vspace{10pt} $n=0, 1, \cdots$} \\
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Mixed \\ \vspace{10pt} Type I}} & 
+    \parbox[c][60pt]{90pt}{\centering $\phi''(x) + \lambda \phi(x)=0$ \\ \vspace{10pt} $\phi(0)=\phi'(l)=0$}
+    & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \lambda_{n}=\left( \frac{(2n-1)\pi}{2l} \right)^{2}$ \\ \vspace{10pt} $n=1, 2, \cdots$} & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \phi_{n} = \sin\frac{(2n-1)\pi x}{2l}$ \\ \vspace{10pt} $n=1, 2, \cdots$} \\
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Mixed \\ \vspace{10pt} Type II}} & 
+    \parbox[c][60pt]{90pt}{\centering $\phi''(x) + \lambda \phi(x)=0$ \\ \vspace{10pt} $\phi'(0)=\phi(l)=0$}
+    & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \lambda_{n}=\left( \frac{(2n-1)\pi}{2l} \right)^{2}$ \\ \vspace{10pt} $n=1, 2, \cdots$} & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \phi_{n} = \cos\frac{(2n-1)\pi x}{2l}$ \\ \vspace{10pt} $n=1, 2, \cdots$} \\
+    \hline
+\end{tabular}
+\end{center}
+
+
+\end{enumerate}
+
+
+\newpage
+
+\section[2D Heat, Wave and Laplace Equations]{Two-Dimensional Heat, Wave and Laplace Equations}
+
+
+\begin{enumerate}
+
+\item \textbf{Exercise 14.13.}
+
+Solve the problem for a vibrating square membrane with side length $1$, where the vibrations are governed by the following two-dimensional wave equation:
+\begin{align*}
+    & \frac{\partial^{2} u}{\partial t^{2}} = \frac{1}{\pi^{2}}\left(\frac{\partial^{2} u}{\partial x^{2}} + \frac{\partial^{2} u}{\partial y^{2}}\right), \quad 0<x<1 , \quad 0<y<1 , \quad t>0, \\
+    & u(0,y,t) = u(1,y,t) = 0,\\
+    & u(x,0,t) = u(x,1,t) = 0,\\
+    & u(x,y,0) = \sin \pi x \sin \pi y, \\
+    & \frac{\partial u}{\partial t}(x,y,0) = \sin \pi x. \\
+\end{align*}
+
+
+\newpage 
+\textit{(continue Exercise 14.13)}
+
+\newpage 
+\textit{(continue Exercise 14.13)}
+
+\newpage
+
+\item \textbf{Heat, Wave and Laplace equations on the rectangle}
+
+\begin{enumerate}
+
+    \item Heat equation
+    \begin{align*}
+        & \frac{\partial^{2} u}{\partial t^{2}} = k\left(\frac{\partial^{2} u}{\partial x^{2}} + \frac{\partial^{2} u}{\partial y^{2}}\right), \quad 0<x<a , \quad 0<y<b , \quad t>0, \\
+        & \\
+        & \\
+        & u(x,y,0) = f(x,y).
+    \end{align*}
+    \vspace{60pt}
+
+    \item Wave equation
+    \begin{align*}
+        & \frac{\partial^{2} u}{\partial t^{2}} = c^{2}\left(\frac{\partial^{2} u}{\partial x^{2}} + \frac{\partial^{2} u}{\partial y^{2}}\right), \quad 0<x<a , \quad 0<y<b , \quad t>0, \\
+        & \\
+        & \\
+        & u(x,y,0) = f(x,y), \\
+        & \frac{\partial u}{\partial t}(x,y,0) = g(x,y). \\
+    \end{align*}
+    \vspace{60pt}
+
+    \item Laplace equation
+    \begin{align*}
+        & \left(\frac{\partial^{2} u}{\partial x^{2}} + \frac{\partial^{2} u}{\partial y^{2}}\right) = 0, \quad 0<x<a , \quad 0<y<b,
+    \end{align*}
+    \vspace{60pt}
+    
+
+\end{enumerate}
+
+\newpage 
+\item Big picture
+
+
+\end{enumerate}
+
+\vfill
+
+\section{Polar coordinates}
+
+\begin{enumerate}
+    \item Given a point $P$ with Cartesian coordinates $(x,y) \neq (0,0)$, the \textbf{polar coordinates} of $P$ are $(r, \theta)$, where
+    \begin{align*}
+        x & = r\cos \theta, \\
+        y & = r\sin \theta.
+    \end{align*}
+    The Jacobian determinant of the transformation is
+    \[\frac{\partial (x,y)}{\partial (r,\theta)} = 
+    \begin{vmatrix}
+        \cos \theta & - r \sin \theta \\
+        \sin \theta & r \sin \theta \\
+    \end{vmatrix} = r.
+    \]
+
+    \newpage
+
+     \item The \textbf{disk of radius} $a$ is defined by 
+    \[D(a)=\{(x,y) \mid x^{2}+y^{2}\leq a^{2}\} = \{(r,\theta) \mid 0\leq r \leq a, \,-\pi \leq \theta \leq \pi\}.\]
+
+    \item The \textbf{Laplacian in polar coordinates} is
+    \[\nabla^{2} u = \frac{1}{r}\frac{\partial}{\partial r}\left( r\frac{\partial u}{\partial r} \right) +\frac{1}{r^{2}}\frac{\partial^{2} u}{\partial \theta^{2}} = \frac{\partial^{2} u}{\partial r^{2}} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^{2}}\frac{\partial^{2} u}{\partial \theta^{2}}.\]
+
+
+    \item \textit{Example 6.1. (Potential in a Disk)} \textbf{Summary}. 
+
+    The Dirichlet problem for Laplace's equation in a disk in polar coordinates is
+%     \[
+%     \begin{aligned}
+%         & \nabla^{2} u = 0 \quad \text{on}\quad D(a)\\
+%         & u(x, y) = f (x, y) \quad \text{on} \quad \partial D(a).
+%     \end{aligned}
+%     \]
+    \[
+    \begin{aligned}
+        & \frac{1}{r}\frac{\partial}{\partial r}\left( r\frac{\partial u}{\partial r} \right) +\frac{1}{r^{2}}\frac{\partial^{2} u}{\partial \theta^{2}} = 0, \quad 0 < r < a, \quad -\pi < \theta < \pi, \\
+        & u(r, -\pi) = u(r, \pi), \\
+        & \frac{\partial u}{\partial \theta}(r, -\pi) = \frac{\partial u}{\partial \theta}(r, \pi), \\
+        & \lim_{r\to 0^{+}} u(r, \theta) = u(0, \theta), \\
+        & u(a, \theta) = f (\theta).
+    \end{aligned}
+    \]
+
+\end{enumerate}
+
+
+
+
+
+

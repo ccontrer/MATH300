@@ -1,0 +1,247 @@
+\chapter{Week 5}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section[Separation of Variables]{Separation of Variables: Nonhomogeneous equations}
+
+\begin{enumerate}
+
+
+\item Standard homogeneous Heat and Wave equations
+
+\end{enumerate}
+
+
+\begin{minipage}{\linewidth}
+    \begin{minipage}{0.5\linewidth}
+        \textbf{Heat eq. with Dirichlet BCs}
+        \[
+        \begin{aligned}
+            & u_{t} = k  u_{xx}, \quad 0<x<a , \quad t>0, \\
+            & u(0,t)=0, \quad t>0,\\
+            & u(a,t)=0, \quad t>0, \\
+            & u(x,0)=f(x), \quad 0<x<a.
+        \end{aligned}
+        \]
+        The solution has the form
+        \[u(x,t)=\sum_{n=1}^{\infty} b_{n}e^{-\left(\frac{n\pi}{a}\right)^{2}kt}\sin \frac{n\pi x}{a}.\]
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \textbf{Heat equation with Neumann BCs}
+        \[
+        \begin{aligned}
+            & u_{t} = k  u_{xx}, \quad 0<x<a , \quad t>0, \\
+            & u_{x}(0,t)=0, \quad t>0,\\
+            & u_{x}(a,t)=0, \quad t>0, \\
+            & u(x,0)=f(x), \quad 0<x<a.
+        \end{aligned}
+        \]
+        The solution has the form
+        \[u(x,t)=a_{0}+\sum_{n=1}^{\infty} a_{n}e^{-\left(\frac{n\pi}{a}\right)^{2}kt}\cos \frac{n\pi x}{a}.\]
+    \end{minipage} \\
+    
+    \vspace{20pt}
+    \begin{minipage}{0.5\linewidth}
+        \textbf{Wave equation with Dirichlet BCs}
+        \[
+        \begin{aligned}
+            & u_{tt} = c^{2}  u_{xx}, \quad 0<x<a , \quad t>0, \\
+            & u(0,t)=0, \quad t>0,\\
+            & u(a,t)=0, \quad t>0, \\
+            & u(x,0)=f(x), \quad 0<x<a, \\
+            & u_{t}(x,0)=g(x), \quad 0<x<a.
+        \end{aligned}
+        \]
+        The solution has the form
+        \begin{multline*}
+            u(x,t)=\\ 
+            \sum_{n=1}^{\infty} \left(a_{n}\cos \frac{n\pi c t}{a} + b_{n}\sin \frac{n\pi c t}{a} \right) \sin \frac{n\pi x}{a}.
+        \end{multline*}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \textbf{Wave equation with Neumann BCs}
+        \[
+        \begin{aligned}
+            & u_{tt} = c^{2}  u_{xx}, \quad 0<x<a , \quad t>0, \\
+            & u_{x}(0,t)=0, \quad t>0,\\
+            & u_{x}(a,t)=0, \quad t>0, \\
+            & u(x,0)=f(x), \quad 0<x<a, \\
+            & u_{t}(x,0)=g(x), \quad 0<x<a.
+        \end{aligned}
+        \]
+        The solution has the form
+        \begin{multline*}
+            u(x,t)= a_{0} + \\ 
+            \sum_{n=1}^{\infty} \left(a_{n}\cos \frac{n\pi c t}{a} + b_{n}\sin \frac{n\pi c t}{a} \right) \cos \frac{n\pi x}{a}.
+        \end{multline*}
+    \end{minipage}
+\end{minipage}
+
+\newpage
+
+\begin{enumerate}
+
+\setcounter{enumi}{1}
+
+\item Method for nonhomogeneous equations. Consider a solution of the form
+\[u(x,t)=v(x)+w(x,t).\]
+
+
+
+\item \textbf{Exercise 13.3 (modified)}
+
+Solve the following boundary value--initial value problem for the heat equation
+\[\frac{\partial u}{\partial t}= k\frac{\partial ^{2}u}{\partial t^{2}}+
+\sin\frac{\pi x}{a},\]
+\[u(0,t)=0 \quad \text{and} \quad u(a,t)=1,\]
+\[u(x,0)=3\sin\frac{\pi x}{a} -\sin \frac{3\pi x}{a},\]
+for $0<x<a$, $t>0$.
+
+
+\newpage
+
+\textit{(continue Exercise 13.3 (modified))}
+
+\vfill
+
+
+\item \textbf{Method of Eigenfunc tion Expansions}. Consider a solution of the form
+\[u(x,t)=v(x,t)+w(x,t).\]
+
+
+\vspace{100pt}
+
+
+\end{enumerate}
+
+\newpage
+
+\section{Method of Characteristics}
+
+
+
+\begin{enumerate}
+
+
+\item \textbf{Method of Characteristics}
+
+Consider the first-order linear time-dependent problem of the form
+\[
+\begin{aligned}
+    & \frac{\partial u}{\partial t} + B(x,t)\frac{\partial u}{\partial x} = C(x,t,u) , \quad -\infty<x<\infty, \quad t>0, \\
+    & u(x,0)=f(x).
+\end{aligned}
+\]
+The method of characteristic consists on solving the \textbf{characteristc equations}
+\[
+\begin{aligned}
+    & \frac{d x}{d t} = B(x,t),\\
+    & \frac{d u}{d t} = C(x,t,u),
+\end{aligned}
+\]
+and then using the initial condition.
+
+
+\item \textit{Example 10.2}
+
+Solve the following PDE for $u(x, t)$ on $-\infty<x<\infty$
+
+\[\frac{\partial u}{\partial t} + \alpha \frac{\partial u}{\partial x} + \beta u = 0,\]
+\[u(x,0)=f(x),\]
+using the method of characteristics.
+
+
+\newpage
+
+\item \textbf{Exercise 17.5}
+
+Solve the first-order equation
+\[\frac{\partial u}{\partial t} + 3x \frac{\partial u}{\partial x} = 2t, \quad -\infty<x<\infty, \quad t>0,\]
+\[u(x, 0) = \log(1 + x^{ 2} ).\]
+
+
+\newpage
+
+
+\item \textbf{Exercise 17.6}
+
+Using the method of characteristics, solve
+\[\frac{\partial w}{\partial t} + c \frac{\partial w}{\partial x} = e^{2x}, \quad -\infty<x<\infty, \quad t>0,\]
+\[w(x, 0) = f(x).\]
+
+\newpage
+
+
+\item \textbf{Exercise 17.7}
+
+Using the method of characteristics, solve
+\[\frac{\partial w}{\partial t} + t \frac{\partial w}{\partial x} = 1, \quad -\infty<x<\infty, \quad t>0,\]
+\[w(x, 0) = f(x).\]
+
+
+\newpage
+
+
+\newpage
+
+\item \textbf{Method of Characteristics (revised)}
+
+Consider the first-order linear problem of the form
+\[
+\begin{aligned}
+    & A(x,y)\frac{\partial u}{\partial x} + B(x,y)\frac{\partial u}{\partial y} = C(x,y,u) , \quad -\infty<x<\infty, \quad t>0, \\
+    & u(x,y)=f(x,y), \quad (x,y)\in \Gamma_{a},
+\end{aligned}
+\]
+where $\Gamma_{a}$ is a curve of anchor points and $f$ is a given function.
+
+Consider the surface $z=u(x,y)$ with parametrization
+\[x=x_{0}(a),\quad y=y_{0}(a), \quad z=z_{0}(a)=f(x_{0}(a), y_{0}(a)).\]
+
+This defines \textbf{characteristc equations}
+\[
+\begin{aligned}
+    & \frac{d x}{d s} = A(x,y),\\
+    & x(0)=x_{0}(a),
+\end{aligned}
+\]
+\[
+\begin{aligned}
+    & \frac{d y}{d s} = B(x,y),\\
+    & y(0)=y_{0}(a),
+\end{aligned}
+\]
+\[
+\begin{aligned}
+    & \frac{d z}{d s} = C(x,y,z),\\
+    & z(0)=z_{0}(a),
+\end{aligned}
+\]
+which can be used to 
+\begin{enumerate}
+    \item Solve the first two characteristic equations to get $x$ and $y$ in terms of the characteristic variable $s$ and the anchor point $a$:
+    \[x=X(s,a), \quad y=Y(s,a)\]
+    \item Insert the solution from the previous step into the third characteristic equation, and solve
+    the resulting equation for $z$:
+    \[z=Z(s,a).\]
+    \item Write the characteristic variables and anchor point $a$ in terms of the original independent variables $x$ and $y$; that is, invert
+    \[x=X(s,a), \quad y=Y(s,a)\]
+    to get
+    \[s=S(x,y), \quad a=\Gamma(x,y).\]
+    \item Write the solution for $z$ in terms of $x$ and $y$ to get the solution to the original PDE:
+    \[u(x,y)=Z(S(x,y), \Gamma(x,y)).\]
+\end{enumerate}
+
+\newpage
+
+
+\textit{(extra page)}
+
+\newpage
+
+\textit{(extra page)}
+
+
+
+\end{enumerate}
+

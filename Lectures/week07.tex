@@ -1,0 +1,138 @@
+\chapter{Week 7}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section{Sturm-Liouville Theory}
+
+
+\begin{enumerate}
+
+
+% \item The homogeneous second-order linear ODE
+% \[(p(x)\phi')'+[q(x)+\lambda\sigma(x)]\phi=0, \quad a < x < b,\]
+% where $p'(x)$, $q(x)$, and $\sigma(x)$ are all continuous on the interval $a < x < b$, and $p(x) > 0$ and $\sigma(x) > 0$ for $a < x < b$, is said to be in \textbf{self-adjoint form} or \textbf{Sturm-Liouville form}. We show below that this form is fairly general.
+% 
+% 
+% 
+% \item \textbf{Theorem 4.1.} Any homogeneous second-order linear ODE
+% \[a _0 (x)\phi '' + a _1 (x)\phi ' + [a _2 (x) + \lambda]\phi = 0, \quad a < x < b,\]
+% where the coefficient functions $a _0 (x)$, $a _1 (x)$, $a _2 (x)$ are continuous and $a _0 (x) >0$ on the interval $a < x < b$, can be put into self-adjoint form.
+
+
+
+\item \textbf{Definition 4.1.} A \textbf{regular Sturm-Liouville problem} denotes the problem of finding an eigenfunction-eigenvalue pair $(\phi, \lambda)$ which solves the problem
+\begin{align*}
+& (p(x)\phi ' ) ' + [q(x) + \lambda \sigma(x)]\phi = 0, \quad a < x < b,\\
+& \alpha _1 \phi(a) + \beta _1 \phi ' (a) = 0, \\
+& \alpha _2 \phi(b) + \beta _2 \phi ' (b) = 0,
+\end{align*}
+where
+\begin{enumerate}[(i)]
+
+\item $p(x)$, $p ' (x)$, $q(x)$, and $\sigma(x)$ are real valued and continuous for $a \leq x \leq b$;
+
+\item $p(x) > 0$ and $\sigma(x) > 0$ for $a \leq x \leq b$; and
+
+\item $\alpha_1$ , $\alpha _2$ , $\beta _1$ , $\beta _2$ are real valued, $\alpha _1 ^2 + \beta _1 ^2 \neq 0$ and $\alpha _2 ^2 + \beta _2 ^2 \neq 0$.
+\end{enumerate}
+
+
+
+\item \textit{Example 4.2.} Consider the following boundary value problem, which we have
+solved several times before:
+\begin{align*}
+& \phi '' + \lambda \phi = 0, \quad 0 < x < l,\\
+& \phi(0) = 0, \\
+& \phi(l) = 0.
+\end{align*}
+
+
+\newpage
+
+
+\item \textbf{Definition 4.2.} A Sturm-Liouville problem is said to be \textbf{singular} if at least one of the conditions (i), (ii), or (iii) in Definition 4.1 fails, or if the interval is infinite. In the case where the interval is infinite, or one or both of the functions $p(x)$ and $\sigma(x)$ approach $0$ or $\infty$ at an endpoint of the interval, one or more of the boundary conditions are usually replaced by boundedness conditions on $\phi$.
+
+\item \textit{Example 4.3. (Legendre's Equation)} Consider the boundary value problem for Legendre’s equation,
+\begin{align*}
+& ((1-x^2)\phi ' ) ' + \lambda \phi = 0, \quad -1 < x < 1,\\
+& \alpha _1 \phi(-1) + \beta _1 \phi ' (-1) = 0, \\
+& \alpha _2 \phi(1) + \beta _2 \phi ' (1) = 0,
+\end{align*}
+
+
+\vspace{150pt}
+
+
+\item \textit{Example 4.4. (Bessel's Equation)} For fixed $n$, Bessel’s equation on the interval $a < r < b$,
+\begin{align*}
+& (r\phi ' ) ' + \left( \lambda r - \frac{n^2}{r} \right) \phi = 0,\\
+& \phi(a) = 0, \\
+& \phi(b) = 0,
+\end{align*}
+
+
+
+\newpage
+
+
+\item \textbf{Theorem 4.2.} The spectrum of a regular Sturm-Liouville problem is a countably infinite set with no limit points, that is, an infinite discrete set.
+
+
+\item \textbf{Theorem 4.3.} If $\lambda _m$ and $\lambda _n$ are distinct eigenvalues of a regular Sturm-Liouville problem, that is, $\lambda _m \neq \lambda _n$ , the corresponding eigenfunctions $\phi _m$
+and $\phi _n$ are orthogonal relative to the inner product
+\[\langle f, g\rangle = \int_{a}^{b} f (x)g(x) \sigma (x) dx.\]
+
+
+\item \textbf{Theorem 4.4.} If $\lambda$ is an eigenvalue of a regular Sturm-Liouville problem:
+
+\begin{enumerate}[(a)]
+
+\item $\lambda$ is real, and
+
+\item if $\phi$ and $\psi$ are eigenfunctions corresponding to $\lambda$,
+\[\psi(x)=k\phi(x), \quad a\leq x \leq b,\]
+where $k$ is a nonzero constant, and each eigenfunction can be made real-valued by multiplying it by an appropriate nonzero constant.
+\end{enumerate}
+
+
+
+\item \textit{Example 4.5. (Cauchy-Euler Equation)}
+Consider the boundary value problem
+\begin{align*}
+    & (x\phi ')'+ \frac{\lambda}{x}\phi = 0, \quad 1<x<l, \\
+    & \phi(1) = 0, \\
+    & \phi(l) = 0.
+\end{align*}
+
+
+
+\newpage
+
+\textit{(continue Example 4.5)}
+
+
+% \newpage
+% 
+% 
+% \item \textbf{Theorem 4.5.} Given the regular Sturm-Liouville problem,
+% \begin{align*}
+% & (p(x)\phi ' ) ' + [q(x) + \lambda \sigma(x)]\phi = 0, \quad a < x < b,\\
+% & \alpha _1 \phi(a) + \beta _1 \phi ' (a) = 0, \\
+% & \alpha _2 \phi(b) + \beta _2 \phi ' (b) = 0,
+% \end{align*}
+% with eigenvalues $\lambda_{n}$ and corresponding eigenfunctions $\phi_{n}$.
+% 
+% \begin{enumerate}[(a)]
+%     \item The regular Sturm-Liouville problem has an infinite spectrum
+%     \[S=\{\lambda_{1}, \lambda_{2}, \dots, \lambda_{n}, \dots \}\]
+%     and $\lim_{n\to \infty} \lambda _{n}=+\infty$.
+%     \item If $\alpha_{1}\beta_{1}\leq 0$ and $\alpha_{2}\beta_{2}\geq 0$, the spectrum is bounded below and the eigenvalues may be ordered as
+%     \[\lambda_{1}<\lambda_{2}< \cdots< \lambda_{n}< \cdots.\]
+%     Moreover, if $q(x) \leq 0$ for $a \leq x \leq b$, then $\lambda _{n} \geq 0$ for all $n \geq 1$.
+%     \item If the eigenvalues are ordered as $\lambda_{1}<\lambda_{2}< \cdots< \lambda_{n}< \cdots$, the eigenfunction corresponding to $\lambda _{n}$ has exactly $(n - 1)$ zeros in the interval $a < x < b$.
+% \end{enumerate}
+
+\end{enumerate}
+
+\newpage
+

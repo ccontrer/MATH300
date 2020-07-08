@@ -1,0 +1,103 @@
+\documentclass[12pt,oneside]{book}
+
+
+\usepackage{remotelecture}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[margin=60pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{everyshi}% http://ctan.org/pkg/everyshi
+\usepackage{lipsum}
+\usepackage{enumerate}
+\usepackage{tabularx}
+
+
+% definitions
+\newcounter{weekpage}
+
+% everyshi options
+\EveryShipout{\stepcounter{weekpage}}% Step pagecntr every page
+
+
+
+% titlesec options
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{\Large Math 300: Advanced Boundary Value Problems}{10pt}{\huge}
+
+
+% fancyhrd options
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+\fancypagestyle{plainweek}{%
+    \fancyhf{}
+    \fancyfoot[C]{\bf \thepage~(\theweekpage)}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+\lhead{\bf MATH 300}
+\chead{{\bf\leftmark}}
+\rhead{\rightmark}
+\cfoot{\bf\thepage~(\theweekpage)}
+
+
+% Title
+\title{{\bf MATH 300: Advanced \\ Boundary Value Problems I} \\
+Lecture notes}
+\author{Carlos Contreras}
+\date{University of Alberta \\ Spring/Summer 2020}
+
+
+
+
+
+\begin{document}
+
+
+\thispagestyle{empty}
+
+\frontmatter
+
+\maketitle
+
+\tableofcontents
+
+
+\chapter{Preface}
+
+
+\mainmatter
+
+
+\input{week01}
+\input{week02}
+\input{week03}
+\input{week04}
+\input{week05}
+\input{week06}
+\input{week07}
+\input{week08}
+\input{week09}
+\input{week10}
+\input{week11}
+\input{week12}
+\input{week13}
+
+
+
+\end{document}
+
+
+

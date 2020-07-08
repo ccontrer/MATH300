@@ -1,0 +1,102 @@
+\chapter{Week 12}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section{Fourier Transform Methods in PDEs}
+
+\begin{enumerate}
+
+
+\item For the heat equation and wave equation, we define
+\[\widehat{u}(\omega,t) = \mathcal{F}\left[ u(x,t) \right](\omega) = \frac{1}{2\pi}\int_{-\infty}^{\infty} u(x,t) e^{i\omega x} \, dx. \]
+and recall the following operational properties of the Fourier transform:
+\begin{enumerate}[i)]
+    \item $\displaystyle \mathcal{F}\left[ \frac{\partial^{n} u}{\partial t^{n}}(x,t) \right](\omega) = \frac{d^{n}}{dt^{n}}\widehat{u}(\omega, t)$.
+    \item $\displaystyle \mathcal{F}\left[ \frac{\partial^{n} u}{\partial x^{n}}(x,t) \right](\omega) = (-i\omega)^{n}\widehat{u}(\omega, t)$.
+\end{enumerate}
+
+
+\item \textit{Example 9.1}. Consider the wave problem
+\begin{align*}
+    & \frac{\partial ^{2} u}{\partial t^{2}}=25 \frac{\partial ^{2} u}{\partial x^{2}}, \quad -\infty<x<\infty, \quad t>0,\\
+    & u(x,0)=f(x)=\begin{cases}
+              1, & x>0,\\
+              0, & x<0,
+             \end{cases} \\
+    & \frac{\partial u}{\partial t}(x,0)= 0.
+\end{align*}
+
+\newpage
+
+\item \textbf{Theorem 9.1.} The solution $u(x, t)$ of the linear heat equation
+\begin{align*}
+    & \frac{\partial u}{\partial t}=k \frac{\partial ^{2} u}{\partial x^{2}}, \quad -\infty<x<\infty, \quad t>0,\\
+    & u(x,0)=f(x), \\
+    & |u(x,t)| \quad \text{bounded as} \quad x\to \infty
+\end{align*}
+can be written as
+\[u(x,t)=f(x)*G(x,t)=\int_{-\infty}^{\infty}f(\xi)G(\xi-x,t)\,d\xi,\]
+where
+\[G(x,t) = \frac{1}{\sqrt{4\pi k t}} e^{-\frac{x^{2}}{4kt}}\]
+is called the \textbf{fundamental solution} of the heat equation.
+
+
+\item The \textbf{error function} is given by
+\[\text{erf}(x)=\frac{2}{\sqrt{\pi}} \int_{0}^{x}s^{-t^{2}}\, dt. \]
+
+
+\item \textbf{Lemma 9.1.} The error function is a monotone increasing function which satisfies
+\[\lim_{x\to -\infty} \text{erf}(x)=-1,\quad \text{and}\quad \lim_{x\to -\infty} \text{erf}(x)=1.\]
+
+
+
+
+\item \textbf{Exercise 16.12}
+Use Fourier transforms to find the solution to
+\begin{align*}
+    & \frac{\partial u}{\partial t}= \frac{\partial ^{2} u}{\partial x^{2}}, \quad -\infty<x<\infty, \quad t>0,\\
+    & u(x,0)=\begin{cases}
+               100, & |x|<1 \\
+               0, & |x|>1.
+             \end{cases}
+\end{align*}
+in terms of the error function.
+
+\newpage \textit{(continue Exercise 16.12.)}
+
+\newpage
+
+\item \textbf{Heat Flow in a Semi-infinite Rod} 
+
+\begin{enumerate}[(i)]
+ \item  The heat equation on a semi-infinite domain with \textbf{Dirichlet} condition
+\begin{align*}
+    & \frac{\partial u}{\partial t}=k \frac{\partial ^{2} u}{\partial x^{2}}, \quad 0<x<\infty, \quad t>0,\\
+    & u(0,t) = 0, \\
+    & u(x,0)=f(x), \\
+    & |u(x,t)| \quad \text{bounded as} \quad x\to \infty
+\end{align*}
+has solution
+\[u(x,t) = f_{\text{odd}}(x)*G(x,t) = \frac{1}{\sqrt{4k\pi t}}\int_{0}^{\infty} f(s) \left( e^{-(x-s)^{2}/4kt} - e^{-(x+s)^{2}/4kt} \right) ds. \]
+
+
+\item The heat equation on a semi-infinite domain with \textbf{Neumann} condition
+\begin{align*}
+    & \frac{\partial u}{\partial t}=k \frac{\partial ^{2} u}{\partial x^{2}}, \quad 0<x<\infty, \quad t>0,\\
+    & \frac{\partial u}{\partial t}(0,t) = 0, \\
+    & u(x,0)=f(x), \\
+    & |u(x,t)| \quad \text{bounded as} \quad x\to  \infty
+\end{align*}
+has solution
+\[u(x,t) = f_{\text{even}}(x)*G(x,t) = \frac{1}{\sqrt{4k\pi t}}\int_{0}^{\infty} f(s) \left( e^{-(x-s)^{2}/4kt} + e^{-(x+s)^{2}/4kt} \right) ds. \]
+
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+
+
+

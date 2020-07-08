@@ -1,0 +1,219 @@
+\chapter{Week 13}
+\setcounter{weekpage}{1}
+\thispagestyle{plainweek}
+
+\section{Summary}
+
+\begin{enumerate}
+
+
+\item \textbf{Definition 2.10}.  The \textbf{Fourier series}  of $f$ on $(a, b)$ is given by
+\[f(x) \sim a_{0}+\sum_{n=1}^{\infty}a_{n}\cos \frac{n\pi x}{l} + b_{n}\sin \frac{n\pi x}{l},\]
+where $l=(b-a)/2$ and
+\[a_{0} = \frac{1}{2l}\int_{a}^{b}f(x)dx, \quad a_{n} = \frac{1}{l}\int_{a}^{b}f(x)\cos\frac{n\pi x}{l}dx,\quad b_{n} = \frac{1}{l}\int_{a}^{b}f(x)\sin\frac{n\pi x}{l}dx,\quad n\geq 1,\]
+are called the \textbf{Fourier coefficients} of $f$.
+
+% \item Let function $f$ defined on $(0,l)$.
+% \begin{itemize}
+%     \item[(i)] The \textbf{Fourier sine series} for $f$ is
+%     \[f(x) \sim \sum_{n=1}^{\infty}b_{n}\sin\frac{n\pi x}{l},\]
+%     where
+%     \[b_{n} = \frac{2}{l}\int_{0}^{l}f(x)\sin\frac{n\pi x}{l}dx \quad \text{for} \quad n \geq 1. \]
+%     Note that this defines $f_{\text{even}}$, the  odd extension of $f$ on $(-l,l)$.
+%     \item[(ii)] The \textbf{Fourier cosine series} for $f$ is
+%     \[f(x) \sim a_{0} + \sum_{n=1}^{\infty}a_{n}\sin\frac{n\pi x}{l},\]
+%     where
+%     \[a_{0} = \frac{1}{l}\int_{0}^{l}f(x)dx, \quad \text{and} \quad a_{n} = \frac{2}{l}\int_{0}^{l}f(x)\cos\frac{n\pi x}{l}dx\quad \text{for} \quad n \geq 1. \]
+%     Note that this defines $f_{\text{even}}$, the even extension of $f$ on $(-l,l)$.
+% \end{itemize}
+
+
+
+% \item Standard homogeneous Heat and Wave equations
+% 
+% \end{enumerate}
+% 
+% 
+% \begin{minipage}{\linewidth}
+%     \begin{minipage}{0.5\linewidth}
+%         \textbf{Heat eq. with Dirichlet BCs}
+%         \[
+%         \begin{aligned}
+%             & u_{t} = k  u_{xx}, \quad 0<x<a , \quad t>0, \\
+%             & u(0,t)=0, \quad t>0,\\
+%             & u(a,t)=0, \quad t>0, \\
+%             & u(x,0)=f(x), \quad 0<x<a.
+%         \end{aligned}
+%         \]
+%         The solution has the form
+%         \[u(x,t)=\sum_{n=1}^{\infty} b_{n}e^{-\left(\frac{n\pi}{a}\right)^{2}kt}\sin \frac{n\pi x}{a}.\]
+%     \end{minipage}
+%     \begin{minipage}{0.5\linewidth}
+%         \textbf{Heat equation with Neumann BCs}
+%         \[
+%         \begin{aligned}
+%             & u_{t} = k  u_{xx}, \quad 0<x<a , \quad t>0, \\
+%             & u_{x}(0,t)=0, \quad t>0,\\
+%             & u_{x}(a,t)=0, \quad t>0, \\
+%             & u(x,0)=f(x), \quad 0<x<a.
+%         \end{aligned}
+%         \]
+%         The solution has the form
+%         \[u(x,t)=a_{0}+\sum_{n=1}^{\infty} a_{n}e^{-\left(\frac{n\pi}{a}\right)^{2}kt}\cos \frac{n\pi x}{a}.\]
+%     \end{minipage} \\
+%     
+%     \vspace{20pt}
+%     \begin{minipage}{0.5\linewidth}
+%         \textbf{Wave equation with Dirichlet BCs}
+%         \[
+%         \begin{aligned}
+%             & u_{tt} = c^{2}  u_{xx}, \quad 0<x<a , \quad t>0, \\
+%             & u(0,t)=0, \quad t>0,\\
+%             & u(a,t)=0, \quad t>0, \\
+%             & u(x,0)=f(x), \quad 0<x<a, \\
+%             & u_{t}(x,0)=g(x), \quad 0<x<a.
+%         \end{aligned}
+%         \]
+%         The solution has the form
+%         \begin{multline*}
+%             u(x,t)=\\ 
+%             \sum_{n=1}^{\infty} \left(a_{n}\cos \frac{n\pi c t}{a} + b_{n}\sin \frac{n\pi c t}{a} \right) \sin \frac{n\pi x}{a}.
+%         \end{multline*}
+%     \end{minipage}
+%     \begin{minipage}{0.5\linewidth}
+%         \textbf{Wave equation with Neumann BCs}
+%         \[
+%         \begin{aligned}
+%             & u_{tt} = c^{2}  u_{xx}, \quad 0<x<a , \quad t>0, \\
+%             & u_{x}(0,t)=0, \quad t>0,\\
+%             & u_{x}(a,t)=0, \quad t>0, \\
+%             & u(x,0)=f(x), \quad 0<x<a, \\
+%             & u_{t}(x,0)=g(x), \quad 0<x<a.
+%         \end{aligned}
+%         \]
+%         The solution has the form
+%         \begin{multline*}
+%             u(x,t)= a_{0} + \\ 
+%             \sum_{n=1}^{\infty} \left(a_{n}\cos \frac{n\pi c t}{a} + b_{n}\sin \frac{n\pi c t}{a} \right) \cos \frac{n\pi x}{a}.
+%         \end{multline*}
+%     \end{minipage}
+% \end{minipage}
+% 
+% 
+% \begin{enumerate}
+% 
+% \setcounter{enumi}{3}
+
+\item \textbf{Method of Characteristics}
+
+Consider the first-order linear time-dependent problem of the form
+\[
+\begin{aligned}
+    & \frac{\partial u}{\partial t} + B(x,t)\frac{\partial u}{\partial x} = C(x,t,u) , \quad -\infty<x<\infty, \quad t>0, \\
+    & u(x,0)=f(x).
+\end{aligned}
+\]
+The method of characteristic consists on solving the \textbf{characteristc equations}
+\[
+\begin{aligned}
+    & \frac{d x}{d t} = B(x,t),\\
+    & \frac{d u}{d t} = C(x,t,u),
+\end{aligned}
+\]
+and then using the initial condition.
+
+
+\item Consider the one-dimensional wave equation
+\[\frac{\partial^{2} u}{\partial t^{2}} = c^{2} \frac{\partial^{2} u}{\partial x^{2}}, \quad -\infty<x<\infty, \quad t>0, \quad u(x,0)=f(x), \quad \frac{\partial u}{\partial t}(x,0)=g(x).\]
+\textbf{d'Alembert's solution} is given by
+\[u(x,t)= \frac{1}{2}[f(x+ct)+f(x-ct)] + \frac{1}{2c} \int _{x-ct}^{x+ct} g(\mu)\, d\mu.\]
+
+\item Consider the one-dimensional wave equation
+\[
+\begin{aligned}
+& \frac{\partial^{2} u}{\partial t^{2}} = c^{2} \frac{\partial^{2} u}{\partial x^{2}}, \quad 0<x<l, \quad t>0, \\
+& u(0,t)=0, \quad  u(l,t)=0, \quad u(x,0)=f(x), \quad \frac{\partial u}{\partial t}(x,0)=g(x).\end{aligned}
+\]
+\textbf{d'Alembert's solution} is given by
+\[u(x,t)= \frac{1}{2}[\bar f_{\text{odd}}(x+ct)+ \bar f_{\text{odd}}(x-ct)] + \frac{1}{2c}\int _{x-ct}^{x+ct} \bar g_{\text{odd}}(\mu)\, d\mu,\]
+where $\bar f_{\text{odd}}$ and $\bar g _{\text{odd}}$ are the $2l$-periodic extension of $f$ and $g$, respectively.
+
+
+
+\item Given the regular Sturm-Liouville problem,
+\begin{align*}
+& (p(x)\phi ' ) ' + [q(x) + \lambda \sigma(x)]\phi = 0, \quad a < x < b,\\
+& \alpha _1 \phi(a) + \beta _1 \phi ' (a) = 0, \\
+& \alpha _2 \phi(b) + \beta _2 \phi ' (b) = 0,
+\end{align*}
+with eigenvalues $\lambda_{n}$ and corresponding eigenfunctions $\phi_{n}$.
+
+\item \textbf{Theorem 4.6.} \textit{(Dirichlet's Theorem)}
+
+If $f$ is piecewise smooth on $[a, b]$, the \textbf{generalized Fourier series},
+\[
+f(x)\sim \sum_{n=1}^{\infty} c_{n}\phi_{n}(x), \quad 
+\text{where}, \quad
+c_{n}=\frac{\langle f, \phi_{n}\rangle}{\|\phi_{n}\|^{2}} = \frac{1}{\|\phi_{n}\|^{2}}\int_{a}^{b} f(x)\phi_{n}(x)\sigma(x)\,dx,
+\]
+for $n \geq 1$, converges pointwise to $[f (x ^{+} ) + f (x ^{-} )]/2$ for each $x \in (a, b)$.
+
+
+
+\item \textbf{Theorem 4.7.} 
+
+$\lambda _{n}$ can be calculated from the \textbf{Rayleigh quotient}:
+\[
+\lambda_{n} = \frac{ \displaystyle -p(x)\phi_{n}(x)\phi'_{n}(x)\Big|_{a}^{b} + \int_{a}^{b}(p(x)\phi'_{n}(x)^{2} - q(x)\phi_{n}(x)^{2}) \, dx }{ \displaystyle \int_{a}^{b}\phi_{n}(x)^{2}\sigma(x)\, dx}.
+\]
+
+
+\item Summary of Sturm-Liouville problems.
+
+\begin{center}\small
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Model Type}} & 
+    \parbox[c][30pt]{90pt}{\centering \textbf{S-L Problem}} & \parbox[t]{90pt}{\centering \textbf{Spectrum}} & 
+    \parbox[c][30pt]{90pt}{\centering \textbf{Eigenfunctions}} \\
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Homogeneous \\ \vspace{10pt} Dirichlet B.C.}} & 
+    \parbox[c][60pt]{90pt}{\centering $\phi''(x) + \lambda \phi(x)=0$ \\ \vspace{10pt} $\phi(0)=\phi(l)=0$}
+    & 
+    \parbox[c][60pt]{90pt}{\centering $\displaystyle \lambda_{n}=\left( \frac{n\pi}{l} \right)^{2}$ \\ \vspace{10pt} $n=1, 2, \cdots$} & 
+    \parbox[c][60pt]{90pt}{\centering $\displaystyle \phi_{n} = \sin\frac{n\pi x}{l}$ \\ \vspace{10pt} $n=1, 2, \cdots$} \\
+    \hline 
+    \parbox[c][30pt]{90pt}{\centering \textbf{Homogeneous \\ \vspace{10pt} Neumann B.C.}} & 
+    \parbox[c][60pt]{90pt}{\centering $\phi''(x) + \lambda \phi(x)=0$ \\ \vspace{10pt} $\phi'(0)=\phi'(l)=0$}
+    & 
+    \parbox[c][60pt]{90pt}{\centering $\displaystyle \lambda_{n}=\left( \frac{n\pi}{l} \right)^{2}$ \\ \vspace{10pt} $n=0, 1, \cdots$} & 
+    \parbox[c][60pt]{90pt}{\centering $\displaystyle \phi_{n} = \cos\frac{n\pi x}{l}$ \\ \vspace{10pt} $n=0, 1, \cdots$} \\
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Mixed \\ \vspace{10pt} Type I}} & 
+    \parbox[c][60pt]{90pt}{\centering $\phi''(x) + \lambda \phi(x)=0$ \\ \vspace{10pt} $\phi(0)=\phi'(l)=0$}
+    & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \lambda_{n}=\left( \frac{(2n-1)\pi}{2l} \right)^{2}$ \\ \vspace{10pt} $n=1, 2, \cdots$} & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \phi_{n} = \sin\frac{(2n-1)\pi x}{2l}$ \\ \vspace{10pt} $n=1, 2, \cdots$} \\
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Mixed \\ \vspace{10pt} Type II}} & 
+    \parbox[c][60pt]{90pt}{\centering $\phi''(x) + \lambda \phi(x)=0$ \\ \vspace{10pt} $\phi'(0)=\phi(l)=0$}
+    & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \lambda_{n}=\left( \frac{(2n-1)\pi}{2l} \right)^{2}$ \\ \vspace{10pt} $n=1, 2, \cdots$} & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \phi_{n} = \cos\frac{(2n-1)\pi x}{2l}$ \\ \vspace{10pt} $n=1, 2, \cdots$} \\
+    \hline
+    \parbox[c][30pt]{90pt}{\centering \textbf{Periodicity \\ \vspace{10pt} conditions}} & 
+    \parbox[c][80pt]{90pt}{\centering $\phi''(\theta) + \lambda \phi(\theta)=0$ \\ \vspace{10pt} $\phi(-\pi)=\phi(\pi)$ \\ \vspace{10pt} $\phi'(-\pi)=\phi'(\pi)$}
+    & 
+    \parbox[c][60pt]{100pt}{\centering $\displaystyle \lambda_{n}=n^{2}$ \\ \vspace{10pt} $n=0, 1, \cdots$} & 
+    \parbox[c][60pt]{100pt}{\centering $ \phi_{n} = a_{n}\cos n \theta$ \hfill  \\ $+ b_{n}\sin n \theta$ \\ \vspace{10pt} $n=0, 1, \cdots$} \\
+    \hline
+\end{tabular}
+\end{center}
+
+
+
+\end{enumerate}
+
+
+
+
