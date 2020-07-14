@@ -74,7 +74,7 @@
 
     \[
     \begin{aligned}
-        & \frac{\partial^{2} u}{\partial t^{2}}  = c\left( \frac{\partial^{2} u}{\partial r^{2}} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^{2}}\frac{\partial^{2} u}{\partial \theta^{2}} \right), \quad 0 < r < a, \quad -\pi < \theta < \pi, \quad t>0, \\
+        & \frac{\partial^{2} u}{\partial t^{2}}  = c^{2}\left( \frac{\partial^{2} u}{\partial r^{2}} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^{2}}\frac{\partial^{2} u}{\partial \theta^{2}} \right), \quad 0 < r < a, \quad -\pi < \theta < \pi, \quad t>0, \\
         & u(r, -\pi, t) = u(r, \pi, t), \\
         & \frac{\partial u}{\partial \theta}(r, -\pi,t) = \frac{\partial u}{\partial \theta}(r, \pi,t), \\
         & u(a, \theta, t) = 0, \\
@@ -89,7 +89,7 @@
 \item \textbf{Exercise 13.14.}
 
 Solve the two-dimensional heat equation inside a disk with circularly symmetric time-independent sources, boundary conditions, and initial conditions:
-\[\frac{\partial u}{\partial t} = \frac{k}{r}\frac{\partial}{\partial t}\left( r \frac{\partial u}{\partial r} \right) + Q(r) , \quad 0<r<a, \quad t>0,\]
+\[\frac{\partial u}{\partial t} = \frac{k}{r}\frac{\partial}{\partial r}\left( r \frac{\partial u}{\partial r} \right) + Q(r) , \quad 0<r<a, \quad t>0,\]
 with
 \[u(r,0) = f(r), \quad u(a,t)=T.\]
 
@@ -103,20 +103,24 @@ with
 
 \newpage 
 
-\item \textbf{Exercise 14.18.}
+\textit{(continue Exercise 13.14)}
 
-Solve the wave equation for a ``pie-shaped'' membrane of radius a and angle $\pi/3$ (= 60\textdegree) :
-\[\frac{\partial ^{2}u}{\partial t^{2}} = c^{2}\nabla ^{2}u.\]
-Show that the eigenvalues are all positive. Determine the natural frequencies of oscillation if the boundary conditions are
-\[u(r,0,t) = 0, \quad u \left(r, \frac{\pi}{3}, t \right)=0, \quad \frac{\partial u}{\partial r}(a,\theta, t)=0.\]
-
-\newpage 
-
-\textit{(continue Exercise 14.18)}
-
-\newpage 
-
-\textit{(continue Exercise 14.18)}
+% \newpage 
+% 
+% \item \textbf{Exercise 14.18.}
+% 
+% Solve the wave equation for a ``pie-shaped'' membrane of radius a and angle $\pi/3$ (= 60\textdegree) :
+% \[\frac{\partial ^{2}u}{\partial t^{2}} = c^{2}\nabla ^{2}u.\]
+% Show that the eigenvalues are all positive. Determine the natural frequencies of oscillation if the boundary conditions are
+% \[u(r,0,t) = 0, \quad u \left(r, \frac{\pi}{3}, t \right)=0, \quad \frac{\partial u}{\partial r}(a,\theta, t)=0.\]
+% 
+% \newpage 
+% 
+% \textit{(continue Exercise 14.18)}
+% 
+% \newpage 
+% 
+% \textit{(continue Exercise 14.18)}
 
 
 \end{enumerate}

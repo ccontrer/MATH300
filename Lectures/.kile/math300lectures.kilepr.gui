@@ -2,7 +2,7 @@
 kile_livePreviewEnabled=false
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=lectures.tex
+lastDocument=week13.tex
 
 [document-settings,item:lectures.tex]
 Bookmarks=
@@ -122,7 +122,7 @@ Mode=LaTeX
 Mode Set By User=false
 
 [document-settings,item:week12.tex]
-Bookmarks=
+Bookmarks=71
 Encoding=UTF-8
 Highlighting=LaTeX
 Highlighting Set By User=false
@@ -148,7 +148,7 @@ open=false
 order=-1
 
 [item:remotelecture.sty]
-open=true
+open=false
 order=5
 
 [item:week01.tex]
@@ -184,31 +184,31 @@ open=false
 order=2
 
 [item:week09.tex]
-open=false
-order=3
-
-[item:week10.tex]
 open=true
 order=1
 
-[item:week11.tex]
+[item:week10.tex]
 open=true
 order=2
 
-[item:week12.tex]
+[item:week11.tex]
 open=true
 order=3
 
-[item:week13.tex]
+[item:week12.tex]
 open=true
 order=4
 
+[item:week13.tex]
+open=true
+order=5
+
 [view-settings,view=0,item:lectures.tex]
-CursorColumn=40
-CursorLine=45
+CursorColumn=2
+CursorLine=95
 JumpList=
 TextFolding=[]
-ViMarks=.,45,39,[,45,36,],45,39
+ViMarks=.,95,0,[,95,0,],95,1
 
 [view-settings,view=0,item:remotelecture.sty]
 CursorColumn=0
@@ -275,24 +275,24 @@ ViMarks=.,117,53,[,117,53,],117,53
 
 [view-settings,view=0,item:week09.tex]
 CursorColumn=0
-CursorLine=9
+CursorLine=137
 JumpList=
 TextFolding=[]
 ViMarks=.,124,30,[,124,30,],124,30
 
 [view-settings,view=0,item:week10.tex]
-CursorColumn=0
-CursorLine=113
+CursorColumn=225
+CursorLine=62
 JumpList=
 TextFolding=[]
-ViMarks=.,118,0,[,118,0,],118,0
+ViMarks=.,91,70,[,91,70,],91,70
 
 [view-settings,view=0,item:week11.tex]
-CursorColumn=4
-CursorLine=96
+CursorColumn=0
+CursorLine=66
 JumpList=
 TextFolding=[]
-ViMarks=.,96,0,[,96,0,],96,0
+ViMarks=.,20,79,[,20,79,],20,79
 
 [view-settings,view=0,item:week12.tex]
 CursorColumn=71
@@ -302,8 +302,8 @@ TextFolding=[]
 ViMarks=.,82,71,[,82,71,],82,71,a,71,85
 
 [view-settings,view=0,item:week13.tex]
-CursorColumn=0
-CursorLine=164
+CursorColumn=65
+CursorLine=226
 JumpList=
 TextFolding=[]
-ViMarks=.,164,0,[,164,0,],164,0
+ViMarks=.,226,64,[,226,64,],226,64

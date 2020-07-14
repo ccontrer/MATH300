@@ -2,11 +2,51 @@
 \setcounter{weekpage}{1}
 \thispagestyle{plainweek}
 
-\section{Spherical Coordinates}
+\section{Legendre functions}
 
 \begin{enumerate}
 
 
+% \item \textbf{Legendre's equation} is given by
+% \[(1-x^{2})\frac{d^{2}v}{dx^{2}}-2x\frac{dv}{dx}+\lambda  v=0, \quad -1<x<1.\]
+
+\item \textbf{Theorem 7.2} The singular Sturm-Liouville problem given by \textbf{Legendre's equation}
+\[
+\begin{aligned}
+& (1-x^{2})\frac{d^{2}v}{dx^{2}}-2x\frac{dv}{dx}+\lambda  v=0, \quad -1<x<1. \\
+& |v(x)| \text{  and  } |v'(x)| \text{  bounded as  } x\to -1^{+} \text{  and  } x\to 1^{-}
+\end{aligned}
+\]
+has eigenvalues and corresponding eigenfunctions
+\[\lambda_{n}= n(n+1), \quad \phi_{n}(x)=P_{n}(x)=\sum_{k=0}^{\lfloor \frac{n}{2} \rfloor} \frac{(-1)^{k}(2n-2k)!x^{n-2k}}{2^{n}k!(n-k)!(n-2k)!}, \quad n\geq 0,\]
+where $P_{n}(x)$ are called \textbf{Legendre polynomials}.
+
+\item \textbf{Theorem 7.3.} (Orthogonality of Legendre Polynomials) If $m$ and $n$ are nonnegative integers with $m \neq n$,
+\[\int_{-1}^{1}P_{m}(x)P_{n}(x)\,dx = 0.\]
+
+
+\item \textbf{Theorem 7.10.} (Fourier-Legendre Expansion Theorem) If $f$ and $f$ are piecewise continuous on $[-1, 1]$, then for $-1 < x_{ 0} < 1$ the \textbf{Fourier-Legendre} expansion series
+\[f(x)=\sum_{n=1}^{\infty} a_{n} P_{n}(x_{0}), \quad \text{where} \quad a_{n} = \frac{2n+1}{2} \int _{-1}^{1} f(x) P_{n}(x) \, dx,\]
+converges to $[f(x_{0}^{+})+f({x_{0}^{-}})]/2$. At $x _{0} = -1$, the series converges to $f(-1^{+})$, while at $x _{0} = 1$, the series converges to $f(1^{-})$.
+
+
+\item We can use substitution $x=\cos\theta$ and $v(x)=S(\theta)$ to transform
+\[\sin \theta  \left( \sin\theta\, S ' \right) ' + (\lambda \sin^{2}\theta -\nu )S = 0, \]
+into the \textbf{associated Legendre's equation}
+\[(1-x^{2})v'' -2xv' + \left( \lambda -\frac{\nu}{1-x^{2}} \right)v = 0.\]
+
+
+\end{enumerate}
+
+
+
+\newpage
+
+\section{Spherical coordinates}
+
+
+
+\begin{enumerate}
 
 \item Given a point $P$ with Cartesian coordinates $(x,y,z)$, where $ (x,y) \neq (0,0)$, the \textbf{spherical coordinates} of $P$ are $(r, \theta, \phi)$, where
     \begin{align*}
@@ -32,24 +72,6 @@
     \]
 
 
-% \item \textbf{Legendre's equation} is given by
-% \[(1-x^{2})\frac{d^{2}v}{dx^{2}}-2x\frac{dv}{dx}+\lambda  v=0, \quad -1<x<1.\]
-
-\item \textbf{Theorem 7.2} The singular Sturm-Liouville problem given by \textbf{Legendre's equation}
-\[
-\begin{aligned}
-& (1-x^{2})\frac{d^{2}v}{dx^{2}}-2x\frac{dv}{dx}+\lambda  v=0, \quad -1<x<1. \\
-& |v(x)| \text{  and  } |v'(x)| \text{  bounded as  } x\to -1^{+} \text{  and  } x\to 1^{-}
-\end{aligned}
-\]
-has eigenvalues and corresponding eigenfunctions
-\[\lambda_{n}= n(n+1), \quad \phi_{n}(x)=P_{n}(x)=\sum_{k=0}^{\lfloor x \rfloor} \frac{(-1)^{k}(2n-2k)!x^{n-2k}}{2^{n}k!(n-k)!(n-2k)!}, \quad n\geq 0,\]
-where $P_{n}(x)$ are called \textbf{Legendre polynomials}.
-
-\item \textbf{Theorem 7.3.} (Orthogonality of Legendre Polynomials) If $m$ and $n$ are nonnegative integers with $m \neq n$,
-\[\int_{-1}^{1}P_{m}(x)P_{n}(x)\,dx = 0.\]
-
-\newpage
 
 \item \textbf{Exercise 13.19. Heat Flow on a Spherical Shell}
 
@@ -133,7 +155,6 @@ If $f$ is piecewise smooth, $f$ and $f ' $ are integrable on $[0, \infty)$, and 
     and if $f ''$ is integrable on $[0, \infty)$ and $\lim _{x\to \infty} f' (x) \to 0$ also, then
     \[\mathcal{C}\,[f''(x)]\,(\omega) = -\frac{2}{\pi}f'(0) -\omega^{2} \,\mathcal{C}\,[f(x)]\,(\omega).\]
 \end{enumerate}
-
 
 
 
