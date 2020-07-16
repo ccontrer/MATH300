@@ -1,2 +1,3 @@
 .kile/
 .ipynb_checkpoints/
+.gitignore
