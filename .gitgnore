@@ -1,0 +1,4 @@
+.kile/
+.ipynb_checkpoints/
+.gitignore
+*.kilepr
