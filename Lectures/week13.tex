@@ -7,6 +7,15 @@
 \begin{enumerate}
 
 
+\item \textbf{Separations of variables}
+\begin{enumerate}[1)]
+\item Write $u(x, t) = X(x)T (t)$.
+\item Solve the Sturm-Liouville problem for $X(x)$.
+\item Solve the corresponding time problem for $T (t)$.
+\item Use superposition.
+\item Use the initial conditions.
+\end{enumerate}
+
 \item \textbf{Definition 2.10}.  The \textbf{Fourier series}  of $f$ on $(a, b)$ is given by
 \[f(x) \sim a_{0}+\sum_{n=1}^{\infty}a_{n}\cos \frac{n\pi x}{l} + b_{n}\sin \frac{n\pi x}{l},\]
 where $l=(b-a)/2$ and
@@ -140,13 +149,13 @@ where $\bar f_{\text{odd}}$ and $\bar g _{\text{odd}}$ are the $2l$-periodic ext
 
 
 
-\item Given the regular Sturm-Liouville problem,
+\item A regular \textbf{Sturm-Liouville problem},
 \begin{align*}
 & (p(x)\phi ' ) ' + [q(x) + \lambda \sigma(x)]\phi = 0, \quad a < x < b,\\
 & \alpha _1 \phi(a) + \beta _1 \phi ' (a) = 0, \\
 & \alpha _2 \phi(b) + \beta _2 \phi ' (b) = 0,
 \end{align*}
-with eigenvalues $\lambda_{n}$ and corresponding eigenfunctions $\phi_{n}$.
+has eigenvalues $\lambda_{n}$ and corresponding eigenfunctions $\phi_{n}$ for $n\geq 1$.
 
 \item \textbf{Theorem 4.6.} \textit{(Dirichlet's Theorem)}
 
@@ -160,6 +169,15 @@ for $n \geq 1$, converges pointwise to $[f (x ^{+} ) + f (x ^{-} )]/2$ for each 
 
 
 
+\item \textbf{Method of eigenfunction expansions} 
+\begin{enumerate}[1)]
+    \item Identify the eigenfunctions $\phi_{n}$ associated to the problem.
+    \item Assume a solution of the form $u(x,t) = \sum_{n=1}^{\infty} a_{n}(t)\phi_{n}(x)$. 
+    \item Expand initial conditions and other related functions using generalized Fourier series.
+    \item Substitute into the equation to solve for $a_{n}(t)$.
+\end{enumerate}
+
+
 \item \textbf{Theorem 4.7.} 
 
 $\lambda _{n}$ can be calculated from the \textbf{Rayleigh quotient}:
@@ -167,8 +185,10 @@ $\lambda _{n}$ can be calculated from the \textbf{Rayleigh quotient}:
 \lambda_{n} = \frac{ \displaystyle -p(x)\phi_{n}(x)\phi'_{n}(x)\Big|_{a}^{b} + \int_{a}^{b}(p(x)\phi'_{n}(x)^{2} - q(x)\phi_{n}(x)^{2}) \, dx }{ \displaystyle \int_{a}^{b}\phi_{n}(x)^{2}\sigma(x)\, dx}.
 \]
 
-
+\newpage
 \item Summary of Sturm-Liouville problems.
+
+\end{enumerate}
 
 \begin{center}\small
 \begin{tabular}{|c|c|c|c|}
@@ -214,20 +234,25 @@ $\lambda _{n}$ can be calculated from the \textbf{Rayleigh quotient}:
     \hline
     
     \parbox[c][30pt]{90pt}{\centering \textbf{Bessel \\ \vspace{10pt} equation}} & 
-    \parbox[c][80pt]{120pt}{\centering $x^{2}u'' + x u'+ (\lambda - m^{2}) u=0$ \\ \vspace{10pt} $u(a)=0$ and $|u(x)|$ \\ \vspace{10pt} bounded as $x\to 0^{+}$}
+    \parbox[c][80pt]{130pt}{\centering $r^{2}u'' + r u'+ (\lambda r^{2} - m^{2}) u=0$ \\ \vspace{10pt} $u(a)=0$ and $|u(r)|$ \\ \vspace{10pt} bounded as $r\to 0^{+}$}
     & 
     \parbox[c][60pt]{100pt}{\centering $\displaystyle \lambda_{mn}=\left( \frac{z_{mn}}{a} \right)^{2}$ \\ \vspace{10pt} $n=1, 2, \cdots$} & 
-    \parbox[c][60pt]{120pt}{\centering $ u_{mn} = a_{mn}J_{m}\left( \frac{z_{mn}x}{a} \right)$ \\ \vspace{10pt} $n=1, 2, \cdots$} \\
+    \parbox[c][60pt]{120pt}{\centering $ u_{mn} = a_{mn}J_{m}\left( \frac{z_{mn}r}{a} \right)$ \\ \vspace{10pt} $n=1, 2, \cdots$} \\
     \hline
     
     \parbox[c][30pt]{90pt}{\centering \textbf{Legendre \\ \vspace{10pt} equation}} & 
-    \parbox[c][80pt]{120pt}{\centering $(1-x^{2})v'' -2x v'+ \lambda v=0$ \\ \vspace{10pt} $|v(x)|$ and $|v'(x)|$ \\ \vspace{10pt} bounded as $x\to \pm 1$}
+    \parbox[c][80pt]{120pt}{\centering $(\sin\theta \,v')' + \lambda \sin \theta v=0$ \\ \vspace{10pt} $|v(\theta)|$ and $|v'(\theta)|$ \\ \vspace{10pt} bounded as $\theta \to \pm 1$}
     & 
     \parbox[c][60pt]{100pt}{\centering $\displaystyle \lambda_{n}=n(n+1)$ \\ \vspace{10pt} $n=0, 1, \cdots$} & 
-    \parbox[c][60pt]{120pt}{\centering $ v_{n} = a_{n}P_{ n} (x)$\\ \vspace{10pt} $n=0, 1, \cdots$} \\
+    \parbox[c][60pt]{120pt}{\centering $ v_{n} = a_{n}P_{ n} (\cos \theta )$\\ \vspace{10pt} $n=0, 1, \cdots$} \\
     \hline
 \end{tabular}
 \end{center}
+
+
+\begin{enumerate}
+
+\setcounter{enumi}{9}
 
 \item The \textbf{Laplacian in polar coordinates} is
 \[\nabla^{2} u = \frac{1}{r}\frac{\partial}{\partial r}\left( r\frac{\partial u}{\partial r} \right) +\frac{1}{r^{2}}\frac{\partial^{2} u}{\partial \theta^{2}} = \frac{\partial^{2} u}{\partial r^{2}} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^{2}}\frac{\partial^{2} u}{\partial \theta^{2}}.\]
@@ -240,9 +265,110 @@ $\lambda _{n}$ can be calculated from the \textbf{Rayleigh quotient}:
 \]
 
 
+\item \textbf{Fourier Integral Representation} of $f$ on $(-\infty,\infty)$
 
+\[f(x) = \int _{0}^{\infty} \left[A(\omega)\cos \omega x + B(\omega) \sin \omega x \right]\, d\omega\]
+where 
+\[A(\omega) = \frac{1}{\pi}\int _{-\infty}^{\infty} f(x)\cos \omega x \, dx ,\quad B(\omega) = \frac{1}{\pi} \int_{-\infty}^{\infty} f(x) \sin \omega x \,dx.\]
+
+\item \textbf{Fourier Cosine Integral Representation} of $f$ on $[0,\infty)$
+\[f(x) = \int _{0}^{\infty} A(\omega)\cos \omega x \, d\omega, \quad \text{where} \quad A(\omega) = \frac{2}{\pi}\int _{0}^{\infty} f(x)\cos \omega x \, dx .\]
+
+
+\item \textbf{Fourier Sine Integral Representation} of $f$ on $[0,\infty)$
+\[f(x) = \int _{0}^{\infty} B(\omega)\sin \omega x \, d\omega, \quad \text{where} \quad B(\omega) = \frac{2}{\pi}\int _{0}^{\infty} f(x)\sin \omega x \, dx .\]
+
+
+\item \textbf{Fourier transform} of $f(x)$ on $(-\infty,\infty)$,
+\[\widehat{f}(\omega) = \mathcal{F} \, [f(x)] \,(\omega) =  \frac{1}{2\pi} \int_{-\infty} ^{\infty}f(x) \,e^{i\omega x} \,dx, \quad -\infty < \omega <\infty.\]
+\[{f}(x) = \mathcal{F}^{-1} \, [\widehat{f}(\omega)] \,(x) =  \int_{-\infty} ^{\infty}\widehat{f}(\omega) \,e^{-i\omega x} \,d\omega, \quad -\infty < x <\infty.\]
+
+\item \textbf{Fourier cosine transform} of $f (x)$ on $[0,\infty)$
+\[\mathcal{C}\,[f(x)](\omega)=\frac{2}{\pi} \int_{0}^{\infty}f(x)\cos\omega x \, dx, \quad \mathcal{C}^{-1}\,[g(\omega)](x)= \int_{0}^{\infty}g(\omega)\cos\omega x \, d\omega.\]
+
+\item \textbf{Fourier sine transform} of $f (x)$ on $[0,\infty)$
+\[\mathcal{S}\,[f(x)](\omega)=\frac{2}{\pi} \int_{0}^{\infty}f(x)\sin\omega x \, dx, \quad \mathcal{S}^{-1}\,[g(\omega)](x)= \int_{0}^{\infty}g(\omega)\sin\omega x \, d\omega.\]
+
+\item \textbf{Gauss kernel}
+\[g(x,t) = \frac{1}{\sqrt{4\pi k t}}e^{-\frac{x^{2}}{4 k t}}.\]
+
+\item \textbf{Error function}
+\[\text{erf}(x):= \frac{2}{\sqrt{\pi}}\int_{0}^{x}e^{-t^{2}}\,dt.\]
 
 \end{enumerate}
+
+\newpage
+
+\section{Final review}
+
+\begin{enumerate}
+
+\item \textit{Example 3.4 modified.} Consider the following nonhomogeneous one-dimensional heat equation:
+
+\[
+\begin{aligned}
+    & \frac{\partial u}{\partial t}  = k \frac{\partial^{2} u}{\partial x^{2}} + f(x,t) , \quad 0 < x < 2, \quad t>0, \\
+    & u(0, t) = 0, \\
+    & \frac{\partial u}{\partial x}(2, t) = 0, \\
+    & u (x, 0) = g(x),
+\end{aligned}
+\]
+where $f(x, t)$ is a continuous function of $x$ and $t$.
+
+\newpage
+
+\textit{(continue Example 3.4.)}
+
+\newpage
+
+\item \textit{Example 3.4 modified part 2.} Consider the following nonhomogeneous one-dimensional heat equation:
+
+\[
+\begin{aligned}
+    & \frac{\partial u}{\partial t}  = k \frac{\partial^{2} u}{\partial x^{2}} + f(x,t) , \quad 0 < x < 2, \quad t>0, \\
+    & u(0, t) = a(t), \\
+    & \frac{\partial u}{\partial x}(2, t) = b(t), \\
+    & u (x, 0) = g(x)
+\end{aligned}
+\]
+where $f(x, t)$ is a continuous function of $x$ and $t$, and $a(t)$ and $b(t)$ are
+continuously differentiable functions of $t$.
+
+
+\newpage
+
+\item \textbf{Exercise 19.9.} Consider torsional oscillations of a homogeneous cylindrical shaft. If $\omega(x, t)$ is the angular displacement at time $t$ of the cross section at $x$, then
+\[\frac{\partial^{2} \omega}{\partial t^{2}} = a^{2} \frac{\partial^{2} \omega}{\partial x^{2}}, \quad 0<x<l,\quad t>0, \]
+where the initial conditions are
+\[\omega(x,0)=f(x) \quad \text{and} \quad \frac{\partial \omega}{\partial t} (x,0)=0,\]
+and the ends of the shaft are fixed elastically:
+
+\[\frac{\partial \omega}{\partial x} (0,t) -\alpha\, \omega(0,t)=0 \quad \text{and} \quad \frac{\partial \omega}{\partial x} (l,t) + \alpha\, \omega(l,t)=0 \]
+with $\alpha$ a positive constant.
+
+\begin{enumerate}[(a)]
+\item Why is it possible to use separation of variables to solve this problem?
+
+\item Use separation of variables and show that one of the resulting problems is a regular Sturm-Liouville problem.
+
+\item Show that all of the eigenvalues of this regular Sturm-Liouville problem are positive.
+
+\end{enumerate}
+
+\textbf{Note:} You do not need to solve the initial value problem, just answer the questions (a), (b), and
+(c).
+
+\newpage
+
+\textit{(continue Exercise 19.19.)}
+
+\newpage
+
+
+\item How to solve PDE's in practice?
+
+\end{enumerate}
+
 
 
 

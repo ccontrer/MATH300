@@ -86,10 +86,16 @@ We want to find the temperature distribution $u(\theta, t)$ on the shell if we a
 
 \newpage
 
-\section{Fourier Series}
+\section{Fourier Transforms}
 
 \begin{enumerate}
 
+
+\item Fourier Integral Representation
+
+\[f(x) = \int _{0}^{\infty} \left[A(\omega)\cos \omega x + B(\omega) \sin \omega x \right]\, d\omega\]
+where 
+\[A(\omega) = \int _{-\infty}^{\infty} f(x)\cos \omega x \, dx ,\quad \int_{-\infty}^{\infty} f(x) \sin \omega x \,dx.\]
 
 \item \textbf{Definition 8.2.} If $f$ is piecewise smooth on every finite interval $(a, b)$ and absolutely integrable on $(-\infty, \infty)$, the \textbf{Fourier transform} of $f(x)$, denoted $\widehat{f}$, is
 \[\widehat{f}(\omega) = \mathcal{F} \, [f(x)] \,(\omega) =  \frac{1}{2\pi} \int_{-\infty} ^{\infty}f(x) \,e^{i\omega x} \,dx, \quad -\infty < \omega <\infty.\]

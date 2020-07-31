@@ -43,16 +43,16 @@
 
 \fancypagestyle{plainweek}{%
     \fancyhf{}
-%     \fancyfoot[C]{\bf \thepage~(\theweekpage)}
-    \fancyfoot[C]{\bf \theweekpage}
+    \fancyfoot[C]{\bf \thepage~(\thechapter.\theweekpage)} % two page counters per week
+%     \fancyfoot[C]{\bf \theweekpage} % only one page counter per week
     \renewcommand{\headrulewidth}{0pt}
 }
 
 \lhead{\bf MATH 300}
 \chead{{\bf\leftmark}}
 \rhead{\rightmark}
-% \cfoot{\bf\thepage~(\theweekpage)}
-\cfoot{\bf\theweekpage}
+\cfoot{\bf\thepage~(\thechapter.\theweekpage)} % two page counters per week
+% \cfoot{\bf\theweekpage} % only one page counter per week
 
 
 % Title
@@ -68,34 +68,37 @@ Lecture notes}
 \begin{document}
 
 
-% \thispagestyle{empty}
+\thispagestyle{empty}
 
-% \frontmatter
+\frontmatter
 
-% \maketitle
+\maketitle
 
-% \tableofcontents
-
-
-% \chapter{Preface}
+\tableofcontents
 
 
-% \mainmatter
+\chapter{Preface}
+This is a notebook for complementary notes to  fill out during lectures splited in thidteen weeks. The content is taking from the book ``Partial Differential Equations:
+Theory and Completely Solved
+Problems'' by T. Hillen, I. E. Leonard, H. van Roessel, 2019, Friesen Press. Most of the text is taking verbatim from this book, but some modification have been made in some places for simplicity. 
 
 
-% \input{week01}
-% \input{week02}
-% \input{week03}
-% \input{week04}
-% \input{week05}
-% \input{week06}
-% \input{week07}
-% \input{week08}
-% \input{week09}
-% \input{week10}
-% \input{week11}
-% \input{week12}
-\input{week13}
+\mainmatter
+
+
+\include{week01}
+\include{week02}
+\include{week03}
+\include{week04}
+\include{week05}
+\include{week06}
+\include{week07}
+\include{week08}
+\include{week09}
+\include{week10}
+\include{week11}
+\include{week12}
+\include{week13}
 
 
 
