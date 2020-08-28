@@ -1,3 +1,4 @@
 # MATH300
-Math 300 Advanced Boundary Value Problems 1 Notebooks
+
+Math 300 Advanced Boundary Value Problem lecture notes and Jupyter notebooks.
 
